@@ -3,26 +3,26 @@ package ifonlygram.dto;
 import java.util.List;
 
 public class InfoWiki {
-    private Integer yearObBirth;
-    private Integer yearObDeath;
+    private Integer yearOfBirth;
+    private Integer yearOfDeath;
     private List<String> places;
     private String job;
     private List<String> importantPeople;
 
-    public Integer getYearObBirth() {
-        return yearObBirth;
+    public Integer getYearOfBirth() {
+        return yearOfBirth;
     }
 
-    public void setYearObBirth(Integer yearObBirth) {
-        this.yearObBirth = yearObBirth;
+    public void setYearOfBirth(Integer yearOfBirth) {
+        this.yearOfBirth = yearOfBirth;
     }
 
-    public Integer getYearObDeath() {
-        return yearObDeath;
+    public Integer getYearOfDeath() {
+        return yearOfDeath;
     }
 
-    public void setYearObDeath(Integer yearObDeath) {
-        this.yearObDeath = yearObDeath;
+    public void setYearOfDeath(Integer yearOfDeath) {
+        this.yearOfDeath = yearOfDeath;
     }
 
     public List<String> getPlaces() {
