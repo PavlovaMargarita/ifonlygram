@@ -1,5 +1,6 @@
 package ifonlygram.service;
 
+import ifonlygram.dto.BlogCategory;
 import ifonlygram.dto.InfoWiki;
 import ifonlygram.dto.Profile;
 import ifonlygram.dto.Publication;
@@ -16,22 +17,28 @@ public class ProfileGenerateServiceImpl implements ProfileGenerateService {
     @Autowired
     private PublicationGenerateService publicationGenerateService;
 
-    @Override
-    public Profile generateProfile(RequestInfo requestInfo) {
+    @Autowired
+    private InfoWikiRetrieveService infoWikiRetrieveService;
 
-        InfoWiki infoWiki = getInfoWiki();
+    @Autowired
+    private TagRetrieveService tagRetrieveService;
+
+    @Override
+    public Profile generateProfile(String name, BlogCategory blogCategory) {
+
+        InfoWiki infoWiki = infoWikiRetrieveService.getInfoWikiByName(name);
 
         List<Publication> allPublication = new ArrayList<Publication>();
 
         List<String> wikiParameters = getParametersFromInfoWiki(infoWiki);
         for(String wikiParameter : wikiParameters) {
-            String tag = getRandomTag();
-            List<Publication> publications = publicationGenerateService.generatePublications(tag, requestInfo.getName(), wikiParameter);
+            String tag = getRandomTag(blogCategory);
+            List<Publication> publications = publicationGenerateService.generatePublications(tag, name, wikiParameter);
             allPublication.addAll(publications);
         }
 
         Profile profile = new Profile();
-        profile.setName(requestInfo.getName());
+        profile.setName(name);
         profile.setPublications(allPublication);
 
         return profile;
@@ -47,11 +54,7 @@ public class ProfileGenerateServiceImpl implements ProfileGenerateService {
         return wikiParameters;
     }
 
-    private String getRandomTag() {
-        return null;
-    }
-
-    private InfoWiki getInfoWiki() {
-        return null;
+    private String getRandomTag(BlogCategory blogCategory) {
+        return tagRetrieveService.getRandomTag(blogCategory);
     }
 }
