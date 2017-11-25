@@ -2,7 +2,6 @@ package ifonlygram.rest;
 
 import ifonlygram.dto.BlogCategory;
 import ifonlygram.dto.Profile;
-import ifonlygram.dto.RequestInfo;
 import ifonlygram.service.ProfileGenerateService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;

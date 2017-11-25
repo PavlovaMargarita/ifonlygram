@@ -4,7 +4,6 @@ import ifonlygram.dto.BlogCategory;
 import ifonlygram.dto.InfoWiki;
 import ifonlygram.dto.Profile;
 import ifonlygram.dto.Publication;
-import ifonlygram.dto.RequestInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
