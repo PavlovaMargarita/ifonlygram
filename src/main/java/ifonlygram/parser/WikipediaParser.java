@@ -1,7 +1,6 @@
 package ifonlygram.parser;
 
 import ifonlygram.dto.InfoWiki;
-import org.apache.commons.lang3.StringUtils;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -29,17 +28,20 @@ public class WikipediaParser {
 
         //Get info table from wiki page
         Elements infobox = doc.body().getElementsByClass(INFOBOX);
+        if (infobox.isEmpty()) {
+            return new InfoWiki();
+        }
         Element infoTable = infobox.get(ZERO);
 
         InfoWiki infoWiki = new InfoWiki();
 
         //place of birth
-        String birthPlace = getPlaceByPropertyId(infoTable, PLACE_OF_BIRTH_CODE);
-        infoWiki.addPlace(birthPlace);
+        List<String> birthPlace = getPlacesByPropertyId(infoTable, PLACE_OF_BIRTH_CODE);
+        infoWiki.addPlaces(birthPlace);
 
         //place of death
-        String deathPlace = getPlaceByPropertyId(infoTable, PLACE_OF_DEATH_CODE);
-        infoWiki.addPlace(deathPlace);
+        List<String> deathPlace = getPlacesByPropertyId(infoTable, PLACE_OF_DEATH_CODE);
+        infoWiki.addPlaces(deathPlace);
 
         //year of birth
         Integer birthYear = getYearByPropertyId(infoTable, YEAR_OF_BIRTH_CODE);
@@ -95,13 +97,17 @@ public class WikipediaParser {
         return Collections.EMPTY_LIST;
     }
 
-    private String getPlaceByPropertyId(Element infoTable, String propertyId) {
+    private static List<String> getPlacesByPropertyId(Element infoTable, String propertyId) {
         Elements dataByWikidataPropertyId = infoTable.getElementsByAttributeValue(DATA_WIKIDATA_PROPERTY_ID, propertyId);
         if (dataByWikidataPropertyId.isEmpty()) {
-            return StringUtils.EMPTY;
+            return Collections.EMPTY_LIST;
         }
         Elements titlesInDataWikidataPropertyId = dataByWikidataPropertyId.get(ZERO).getElementsByAttribute(TITLE);
-        return titlesInDataWikidataPropertyId.attr(TITLE);
+        List<String> places = new ArrayList();
+        for (int i = 0; i < titlesInDataWikidataPropertyId.size(); i++) {
+            places.add(titlesInDataWikidataPropertyId.get(i).ownText());
+        }
+        return places;
     }
 
     private List<String> getJobByPropertyId(Element infoTable, String propertyId) {

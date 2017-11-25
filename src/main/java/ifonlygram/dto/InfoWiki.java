@@ -56,8 +56,8 @@ public class InfoWiki {
         this.importantPeople = importantPeople;
     }
 
-    public void addPlace(String place) {
-        places.add(place);
+    public void addPlaces(List<String> placeList) {
+        places.addAll(placeList);
     }
 }
 
