@@ -11,6 +11,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.StringTokenizer;
 
 import static ifonlygram.parser.WikipediaParserConstants.*;
 
@@ -18,9 +19,14 @@ import static ifonlygram.parser.WikipediaParserConstants.*;
 public class WikipediaParser {
 
     public InfoWiki parse(String name) {
+        if (name == null || name.isEmpty()) {
+            return new InfoWiki();
+        }
+        String formattedName = getFormatedName(name);
+
         Document doc;
         try {
-            doc = Jsoup.connect(SEARCH_URL + name).timeout(TIMEOUT).get();
+            doc = Jsoup.connect(SEARCH_URL + formattedName).timeout(TIMEOUT).get();
         } catch (IOException exc) {
             System.out.println(exc);
             return new InfoWiki();
@@ -82,8 +88,13 @@ public class WikipediaParser {
                 for (int j = 0; j < familyCells.size(); j++) {
                     Elements paragraphs = familyCells.get(j).getElementsByTag("p");
                     if (!paragraphs.isEmpty()) {
-                        familyMembersList.add(paragraphs.get(ZERO).ownText());
-                        continue;
+                        Elements links = paragraphs.get(ZERO).getElementsByTag("a");
+                        if (links != null) {
+                            links.get(ZERO).ownText();
+                        } else {
+                            familyMembersList.add(paragraphs.get(ZERO).ownText());
+                            continue;
+                        }
                     }
 
                     Elements links = familyCells.get(j).getElementsByTag("a");
@@ -139,5 +150,16 @@ public class WikipediaParser {
             }
         }
         return ZERO;
+    }
+
+    private String getFormatedName(String name) {
+        String lowerCaseName = name.toLowerCase();
+        StringTokenizer stringTokenizer = new StringTokenizer(lowerCaseName);
+        String formattedName = new String();
+        while (stringTokenizer.hasMoreTokens()) {
+            String token = stringTokenizer.nextToken();
+            formattedName += token.substring(0, 1).toUpperCase() + token.substring(1) + " ";
+        }
+        return formattedName;
     }
 }
