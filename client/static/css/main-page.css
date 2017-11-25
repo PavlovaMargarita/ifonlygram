@@ -300,7 +300,7 @@
 }
 
 .coreSpriteActivityHeart, .coreSpriteAddPhoto, .coreSpriteAddText {
-    background-image: url(./img/9788b71d1b2d.png);
+    background-image: url(../img/9788b71d1b2d.png);
     background-repeat: no-repeat;
     background-position: -192px -222px;
     height: 62px;
@@ -320,7 +320,7 @@
 }
 
 .coreSpriteAppIcon, .coreSpriteAppStoreButton, .coreSpriteBoomerang, .coreSpriteCameraActive, .coreSpriteCameraInactive {
-    background-image: url(./img/9788b71d1b2d.png);
+    background-image: url(../img/9788b71d1b2d.png);
     background-repeat: no-repeat;
     background-position: -306px -136px;
     height: 40px;
@@ -350,7 +350,7 @@
 }
 
 .coreSpriteChevronDownGrey, .coreSpriteChevronRight, .coreSpriteClose, .coreSpriteCloseLight, .coreSpriteComment {
-    background-image: url(./img/9788b71d1b2d.png);
+    background-image: url(../img/9788b71d1b2d.png);
     background-repeat: no-repeat;
     background-position: -341px -303px;
     height: 12px;
@@ -380,7 +380,7 @@
 }
 
 .coreSpriteDesktopNavActivity, .coreSpriteDesktopNavExplore, .coreSpriteDesktopNavLogoAndWordmark, .coreSpriteDesktopNavProfile {
-    background-image: url(./img/9788b71d1b2d.png);
+    background-image: url(../img/9788b71d1b2d.png);
     background-repeat: no-repeat;
     background-position: -260px -336px;
     height: 24px;
@@ -404,7 +404,7 @@
 }
 
 .coreSpriteDismissLarge, .coreSpriteDismissSmall, .coreSpriteDropdownArrowBlue5, .coreSpriteDropdownArrowBlue6 {
-    background-image: url(./img/9788b71d1b2d.png);
+    background-image: url(../img/9788b71d1b2d.png);
     background-repeat: no-repeat;
     background-position: -149px -210px;
     height: 10px;
@@ -428,7 +428,7 @@
 }
 
 .coreSpriteDropdownArrowGrey9, .coreSpriteDropdownArrowWhite, .coreSpriteFacebookIcon, .coreSpriteFacebookIconInverted {
-    background-image: url(./img/9788b71d1b2d.png);
+    background-image: url(../img/9788b71d1b2d.png);
     background-repeat: no-repeat;
     background-position: -377px -327px;
     height: 6px;
@@ -451,7 +451,7 @@
 }
 
 .coreSpriteFbGlyph, .coreSpriteFeedCreation, .coreSpriteGlyphBlack, .coreSpriteGlyphGradient, .coreSpriteGlyphWhite {
-    background-image: url(./img/9788b71d1b2d.png);
+    background-image: url(../img/9788b71d1b2d.png);
     background-repeat: no-repeat;
     background-position: 0 -388px;
     height: 22px;
@@ -483,7 +483,7 @@
 }
 
 .coreSpriteGooglePlayButton, .coreSpriteHashtag, .coreSpriteHeartFull, .coreSpriteHeartOpen, .coreSpriteHeartSmall {
-    background-image: url(./img/9788b71d1b2d.png);
+    background-image: url(../img/9788b71d1b2d.png);
     background-repeat: no-repeat;
     background-position: 0 -136px;
     height: 41px;
@@ -513,7 +513,7 @@
 }
 
 .coreSpriteHyperlapse, .coreSpriteInputAccepted, .coreSpriteInputError, .coreSpriteInputRefresh, .coreSpriteLeftChevron {
-    background-image: url(./img/9788b71d1b2d.png);
+    background-image: url(../img/9788b71d1b2d.png);
     background-repeat: no-repeat;
     background-position: -259px -115px;
     height: 17px;
@@ -542,7 +542,7 @@
 }
 
 .coreSpriteLeftPaginationArrow, .coreSpriteLikeAnimationHeart, .coreSpriteLocation, .coreSpriteLocationActive {
-    background-image: url(./img/9788b71d1b2d.png);
+    background-image: url(../img/9788b71d1b2d.png);
     background-repeat: no-repeat;
     background-position: -233px -286px;
     height: 40px;
@@ -567,7 +567,7 @@
 }
 
 .coreSpriteLock, .coreSpriteLoggedOutGenericUpsell, .coreSpriteLoggedOutWordmark, .coreSpriteMobileNavActivityActive {
-    background-image: url(./img/9788b71d1b2d.png);
+    background-image: url(../img/9788b71d1b2d.png);
     background-repeat: no-repeat;
     background-position: -255px -37px;
     height: 76px;
@@ -593,7 +593,7 @@
 }
 
 .coreSpriteMobileNavActivityInactive, .coreSpriteMobileNavAddPeopleActive, .coreSpriteMobileNavAddPeopleInactive, .coreSpriteMobileNavDiscoverPeople {
-    background-image: url(./img/9788b71d1b2d.png);
+    background-image: url(../img/9788b71d1b2d.png);
     background-repeat: no-repeat;
     background-position: -182px -336px;
     height: 24px;
@@ -615,7 +615,7 @@
 }
 
 .coreSpriteMobileNavExploreActive, .coreSpriteMobileNavExploreInactive, .coreSpriteMobileNavHomeActive, .coreSpriteMobileNavHomeInactive {
-    background-image: url(./img/9788b71d1b2d.png);
+    background-image: url(../img/9788b71d1b2d.png);
     background-repeat: no-repeat;
     background-position: -286px -336px;
     height: 24px;
@@ -635,7 +635,7 @@
 }
 
 .coreSpriteMobileNavLogo, .coreSpriteMobileNavMenuActive, .coreSpriteMobileNavMenuInactive, .coreSpriteMobileNavProfileActive {
-    background-image: url(./img/9788b71d1b2d.png);
+    background-image: url(../img/9788b71d1b2d.png);
     background-repeat: no-repeat;
     background-position: -355px -274px;
     height: 25px;
@@ -657,7 +657,7 @@
 }
 
 .coreSpriteMobileNavProfileInactive, .coreSpriteMobileNavSearchActive, .coreSpriteMobileNavSearchInactive, .coreSpriteMobileNavSettings {
-    background-image: url(./img/9788b71d1b2d.png);
+    background-image: url(../img/9788b71d1b2d.png);
     background-repeat: no-repeat;
     background-position: -387px -130px;
     height: 24px;
@@ -677,7 +677,7 @@
 }
 
 .coreSpriteMobileNavTypeLogo, .coreSpriteNotificationLeftChevron, .coreSpriteNotificationRightChevron, .coreSpriteNullProfile {
-    background-image: url(./img/9788b71d1b2d.png);
+    background-image: url(../img/9788b71d1b2d.png);
     background-repeat: no-repeat;
     background-position: -122px -179px;
     height: 29px;
@@ -703,7 +703,7 @@
 }
 
 .coreSpriteOptionsEllipsis, .coreSpriteOptionsEllipsisLight, .coreSpritePagingChevron, .coreSpritePlayIconSmall {
-    background-image: url(./img/9788b71d1b2d.png);
+    background-image: url(../img/9788b71d1b2d.png);
     background-repeat: no-repeat;
     background-position: -297px -115px;
     height: 16px;
@@ -727,7 +727,7 @@
 }
 
 .coreSpritePrivateLock, .coreSpriteProfileCamera, .coreSpriteProfileGrid, .coreSpriteProfileGridActive {
-    background-image: url(./img/9788b71d1b2d.png);
+    background-image: url(../img/9788b71d1b2d.png);
     background-repeat: no-repeat;
     background-position: -316px -222px;
     height: 36px;
@@ -751,7 +751,7 @@
 }
 
 .coreSpriteProfileSave, .coreSpriteProfileSaveActive, .coreSpriteReload, .coreSpriteRightChevron, .coreSpriteRightPaginationArrow {
-    background-image: url(./img/9788b71d1b2d.png);
+    background-image: url(../img/9788b71d1b2d.png);
     background-repeat: no-repeat;
     background-position: -387px -260px;
     height: 24px;
@@ -781,7 +781,7 @@
 }
 
 .coreSpriteSaveFull, .coreSpriteSaveLightFull, .coreSpriteSaveLightOpen, .coreSpriteSaveNull, .coreSpriteSaveOpen, .coreSpriteSaveStory {
-    background-image: url(./img/9788b71d1b2d.png);
+    background-image: url(../img/9788b71d1b2d.png);
     background-repeat: no-repeat;
     background-position: -26px -336px;
     height: 24px;
@@ -813,7 +813,7 @@
 }
 
 .coreSpriteSearchClear, .coreSpriteSearchIcon, .coreSpriteSensitivityIcon, .coreSpriteSensitivityIconSmall {
-    background-image: url(./img/9788b71d1b2d.png);
+    background-image: url(../img/9788b71d1b2d.png);
     background-repeat: no-repeat;
     background-position: -333px -37px;
     height: 20px;
@@ -839,7 +839,7 @@
 }
 
 .coreSpriteSidecarIconLarge, .coreSpriteSidecarIconSmall, .coreSpriteSpeechBubbleSmall, .coreSpriteSpinsta, .coreSpriteSpinstaNux {
-    background-image: url(./img/9788b71d1b2d.png);
+    background-image: url(../img/9788b71d1b2d.png);
     background-repeat: no-repeat;
     background-position: -100px -286px;
     height: 47px;
@@ -871,7 +871,7 @@
 }
 
 .coreSpriteSpinstaStory, .coreSpriteStoriesPost, .coreSpriteStoryCreation, .coreSpriteStoryCreationAlt {
-    background-image: url(./img/9788b71d1b2d.png);
+    background-image: url(../img/9788b71d1b2d.png);
     background-repeat: no-repeat;
     background-position: -162px -362px;
     height: 11px;
@@ -895,7 +895,7 @@
 }
 
 .coreSpriteStoryViewCount, .coreSpriteUserTagIndicator, .coreSpriteVerifiedBadge, .coreSpriteVerifiedBadgeSmall {
-    background-image: url(./img/9788b71d1b2d.png);
+    background-image: url(../img/9788b71d1b2d.png);
     background-repeat: no-repeat;
     background-position: -122px -210px;
     height: 10px;
@@ -921,7 +921,7 @@
 }
 
 .coreSpriteVideoIconLarge, .coreSpriteVideoIconSmall, .coreSpriteVideoNux, .coreSpriteViewCount, .coreSpriteWindowsStoreButton {
-    background-image: url(./img/9788b71d1b2d.png);
+    background-image: url(../img/9788b71d1b2d.png);
     background-repeat: no-repeat;
     background-position: 0 -286px;
     height: 48px;
@@ -954,7 +954,7 @@
 
 @media (min-device-pixel-ratio: 1.5),(-webkit-min-device-pixel-ratio: 1.5),(min-resolution: 144dpi) {
     .coreSpriteActivityHeart, .coreSpriteAddPhoto, .coreSpriteAddText {
-        background-image: url(./img/5e9cc261d256.png);
+        background-image: url(../img/5e9cc261d256.png);
         background-size: 405px 379px;
         background-position: -189px -218px
     }
@@ -968,7 +968,7 @@
     }
 
     .coreSpriteAppIcon, .coreSpriteAppStoreButton, .coreSpriteBoomerang, .coreSpriteCameraActive, .coreSpriteCameraInactive {
-        background-image: url(./img/5e9cc261d256.png);
+        background-image: url(../img/5e9cc261d256.png);
         background-size: 405px 379px;
         background-position: -98px -281px
     }
@@ -990,7 +990,7 @@
     }
 
     .coreSpriteChevronDownGrey, .coreSpriteChevronRight, .coreSpriteClose, .coreSpriteCloseLight, .coreSpriteComment {
-        background-image: url(./img/5e9cc261d256.png);
+        background-image: url(../img/5e9cc261d256.png);
         background-size: 405px 379px;
         background-position: -176px -113px
     }
@@ -1012,7 +1012,7 @@
     }
 
     .coreSpriteDesktopNavActivity, .coreSpriteDesktopNavExplore, .coreSpriteDesktopNavLogoAndWordmark, .coreSpriteDesktopNavProfile {
-        background-image: url(./img/5e9cc261d256.png);
+        background-image: url(../img/5e9cc261d256.png);
         background-size: 405px 379px;
         background-position: -353px -298px
     }
@@ -1030,7 +1030,7 @@
     }
 
     .coreSpriteDismissLarge, .coreSpriteDismissSmall, .coreSpriteDropdownArrowBlue5, .coreSpriteDropdownArrowBlue6 {
-        background-image: url(./img/5e9cc261d256.png);
+        background-image: url(../img/5e9cc261d256.png);
         background-size: 405px 379px;
         background-position: -216px -113px
     }
@@ -1048,7 +1048,7 @@
     }
 
     .coreSpriteDropdownArrowGrey9, .coreSpriteDropdownArrowWhite, .coreSpriteFacebookIcon, .coreSpriteFacebookIconInverted {
-        background-image: url(./img/5e9cc261d256.png);
+        background-image: url(../img/5e9cc261d256.png);
         background-size: 405px 379px;
         background-position: -397px -348px
     }
@@ -1066,7 +1066,7 @@
     }
 
     .coreSpriteFbGlyph, .coreSpriteFeedCreation, .coreSpriteGlyphBlack, .coreSpriteGlyphGradient, .coreSpriteGlyphWhite {
-        background-image: url(./img/5e9cc261d256.png);
+        background-image: url(../img/5e9cc261d256.png);
         background-size: 405px 379px;
         background-position: -330px -59px
     }
@@ -1088,7 +1088,7 @@
     }
 
     .coreSpriteGooglePlayButton, .coreSpriteHashtag, .coreSpriteHeartFull, .coreSpriteHeartOpen, .coreSpriteHeartSmall {
-        background-image: url(./img/5e9cc261d256.png);
+        background-image: url(../img/5e9cc261d256.png);
         background-size: 405px 379px;
         background-position: 0 -134px
     }
@@ -1110,7 +1110,7 @@
     }
 
     .coreSpriteHyperlapse, .coreSpriteInputAccepted, .coreSpriteInputError, .coreSpriteInputRefresh, .coreSpriteLeftChevron {
-        background-image: url(./img/5e9cc261d256.png);
+        background-image: url(../img/5e9cc261d256.png);
         background-size: 405px 379px;
         background-position: -384px -222px
     }
@@ -1132,7 +1132,7 @@
     }
 
     .coreSpriteLeftPaginationArrow, .coreSpriteLikeAnimationHeart, .coreSpriteLocation, .coreSpriteLocationActive {
-        background-image: url(./img/5e9cc261d256.png);
+        background-image: url(../img/5e9cc261d256.png);
         background-size: 405px 379px;
         background-position: -139px -281px
     }
@@ -1150,7 +1150,7 @@
     }
 
     .coreSpriteLock, .coreSpriteLoggedOutGenericUpsell, .coreSpriteLoggedOutWordmark, .coreSpriteMobileNavActivityActive {
-        background-image: url(./img/5e9cc261d256.png);
+        background-image: url(../img/5e9cc261d256.png);
         background-size: 405px 379px;
         background-position: -253px -36px
     }
@@ -1168,7 +1168,7 @@
     }
 
     .coreSpriteMobileNavActivityInactive, .coreSpriteMobileNavAddPeopleActive, .coreSpriteMobileNavAddPeopleInactive {
-        background-image: url(./img/5e9cc261d256.png);
+        background-image: url(../img/5e9cc261d256.png);
         background-size: 405px 379px;
         background-position: -125px -330px
     }
@@ -1182,7 +1182,7 @@
     }
 
     .coreSpriteMobileNavDiscoverPeople, .coreSpriteMobileNavExploreActive, .coreSpriteMobileNavExploreInactive, .coreSpriteMobileNavHomeActive {
-        background-image: url(./img/5e9cc261d256.png);
+        background-image: url(../img/5e9cc261d256.png);
         background-size: 405px 379px;
         background-position: -225px -176px
     }
@@ -1200,7 +1200,7 @@
     }
 
     .coreSpriteMobileNavHomeInactive, .coreSpriteMobileNavLogo, .coreSpriteMobileNavMenuActive, .coreSpriteMobileNavMenuInactive {
-        background-image: url(./img/5e9cc261d256.png);
+        background-image: url(../img/5e9cc261d256.png);
         background-size: 405px 379px;
         background-position: -300px -330px
     }
@@ -1218,7 +1218,7 @@
     }
 
     .coreSpriteMobileNavProfileActive, .coreSpriteMobileNavProfileInactive, .coreSpriteMobileNavSearchActive {
-        background-image: url(./img/5e9cc261d256.png);
+        background-image: url(../img/5e9cc261d256.png);
         background-size: 405px 379px;
         background-position: -25px -355px
     }
@@ -1232,7 +1232,7 @@
     }
 
     .coreSpriteMobileNavSearchInactive, .coreSpriteMobileNavSettings, .coreSpriteMobileNavTypeLogo, .coreSpriteNotificationLeftChevron {
-        background-image: url(./img/5e9cc261d256.png);
+        background-image: url(../img/5e9cc261d256.png);
         background-size: 405px 379px;
         background-position: -100px -355px
     }
@@ -1250,7 +1250,7 @@
     }
 
     .coreSpriteNotificationRightChevron, .coreSpriteNullProfile, .coreSpriteOptionsEllipsis, .coreSpriteOptionsEllipsisLight {
-        background-image: url(./img/5e9cc261d256.png);
+        background-image: url(../img/5e9cc261d256.png);
         background-size: 405px 379px;
         background-position: -384px -348px
     }
@@ -1268,7 +1268,7 @@
     }
 
     .coreSpritePagingChevron, .coreSpritePlayIconSmall, .coreSpritePrivateLock, .coreSpriteProfileCamera, .coreSpriteProfileGrid {
-        background-image: url(./img/5e9cc261d256.png);
+        background-image: url(../img/5e9cc261d256.png);
         background-size: 405px 379px;
         background-position: -225px -355px
     }
@@ -1290,7 +1290,7 @@
     }
 
     .coreSpriteProfileGridActive, .coreSpriteProfileSave, .coreSpriteProfileSaveActive, .coreSpriteReload, .coreSpriteRightChevron {
-        background-image: url(./img/5e9cc261d256.png);
+        background-image: url(../img/5e9cc261d256.png);
         background-size: 405px 379px;
         background-position: -250px -330px
     }
@@ -1312,7 +1312,7 @@
     }
 
     .coreSpriteRightPaginationArrow, .coreSpriteSaveFull, .coreSpriteSaveLightFull, .coreSpriteSaveLightOpen {
-        background-image: url(./img/5e9cc261d256.png);
+        background-image: url(../img/5e9cc261d256.png);
         background-size: 405px 379px;
         background-position: -303px -134px
     }
@@ -1330,7 +1330,7 @@
     }
 
     .coreSpriteSaveNull, .coreSpriteSaveOpen, .coreSpriteSaveStory, .coreSpriteSearchClear, .coreSpriteSearchIcon {
-        background-image: url(./img/5e9cc261d256.png);
+        background-image: url(../img/5e9cc261d256.png);
         background-size: 405px 379px;
         background-position: -126px -218px
     }
@@ -1352,7 +1352,7 @@
     }
 
     .coreSpriteSensitivityIcon, .coreSpriteSensitivityIconSmall, .coreSpriteSpeechBubbleSmall, .coreSpriteSpinsta {
-        background-image: url(./img/5e9cc261d256.png);
+        background-image: url(../img/5e9cc261d256.png);
         background-size: 405px 379px;
         background-position: 0 -281px
     }
@@ -1370,7 +1370,7 @@
     }
 
     .coreSpriteSpinstaNux, .coreSpriteSpinstaStory, .coreSpriteStoriesPost, .coreSpriteStoryCreation, .coreSpriteStoryCreationAlt {
-        background-image: url(./img/5e9cc261d256.png);
+        background-image: url(../img/5e9cc261d256.png);
         background-size: 405px 379px;
         background-position: -312px -281px
     }
@@ -1392,7 +1392,7 @@
     }
 
     .coreSpriteStoryViewCount, .coreSpriteUserTagIndicator, .coreSpriteVerifiedBadge, .coreSpriteVerifiedBadgeSmall {
-        background-image: url(./img/5e9cc261d256.png);
+        background-image: url(../img/5e9cc261d256.png);
         background-size: 405px 379px;
         background-position: -202px -113px
     }
@@ -1410,7 +1410,7 @@
     }
 
     .coreSpriteVideoIconLarge, .coreSpriteVideoIconSmall, .coreSpriteVideoNux, .coreSpriteViewCount, .coreSpriteWindowsStoreButton {
-        background-image: url(./img/5e9cc261d256.png);
+        background-image: url(../img/5e9cc261d256.png);
         background-size: 405px 379px;
         background-position: -49px -281px
     }
@@ -3440,7 +3440,7 @@ a:active {
 }
 
 .videoSpritePlayButton, .videoSpriteSoundOff, .videoSpriteSoundOn {
-    /*background-image: url(static/bundles/sprite_video.png/0df868727926.png);*/
+    background-image: url(static/bundles/sprite_video.png/0df868727926.png);
     background-repeat: no-repeat;
     background-position: 0 0;
     height: 135px;
@@ -3459,7 +3459,7 @@ a:active {
 
 @media (min-device-pixel-ratio: 1.5),(-webkit-min-device-pixel-ratio: 1.5),(min-resolution: 144dpi) {
     .videoSpritePlayButton, .videoSpriteSoundOff, .videoSpriteSoundOn {
-        /*background-image: url(./sprite_video_2x.png/06390c4e5e96.png);*/
+        background-image: url(./sprite_video_2x.png/06390c4e5e96.png);
         background-size: 152px 135px;
         background-position: 0 0
     }
@@ -8735,7 +8735,7 @@ body.fb_hidden {
 }
 
 .coreSpriteActivityHeart, .coreSpriteAddPhoto, .coreSpriteAddText {
-    background-image: url(./img/9788b71d1b2d.png);
+    background-image: url(../img/9788b71d1b2d.png);
     background-repeat: no-repeat;
     background-position: -192px -222px;
     height: 62px;
@@ -8755,7 +8755,7 @@ body.fb_hidden {
 }
 
 .coreSpriteAppIcon, .coreSpriteAppStoreButton, .coreSpriteBoomerang, .coreSpriteCameraActive, .coreSpriteCameraInactive {
-    background-image: url(./img/9788b71d1b2d.png);
+    background-image: url(../img/9788b71d1b2d.png);
     background-repeat: no-repeat;
     background-position: -306px -136px;
     height: 40px;
@@ -8785,7 +8785,7 @@ body.fb_hidden {
 }
 
 .coreSpriteChevronDownGrey, .coreSpriteChevronRight, .coreSpriteClose, .coreSpriteCloseLight, .coreSpriteComment {
-    background-image: url(./img/9788b71d1b2d.png);
+    background-image: url(../img/9788b71d1b2d.png);
     background-repeat: no-repeat;
     background-position: -341px -303px;
     height: 12px;
@@ -8815,7 +8815,7 @@ body.fb_hidden {
 }
 
 .coreSpriteDesktopNavActivity, .coreSpriteDesktopNavExplore, .coreSpriteDesktopNavLogoAndWordmark, .coreSpriteDesktopNavProfile {
-    background-image: url(./img/9788b71d1b2d.png);
+    background-image: url(../img/9788b71d1b2d.png);
     background-repeat: no-repeat;
     background-position: -260px -336px;
     height: 24px;
@@ -8839,7 +8839,7 @@ body.fb_hidden {
 }
 
 .coreSpriteDismissLarge, .coreSpriteDismissSmall, .coreSpriteDropdownArrowBlue5, .coreSpriteDropdownArrowBlue6 {
-    background-image: url(./img/9788b71d1b2d.png);
+    background-image: url(../img/9788b71d1b2d.png);
     background-repeat: no-repeat;
     background-position: -149px -210px;
     height: 10px;
@@ -8863,7 +8863,7 @@ body.fb_hidden {
 }
 
 .coreSpriteDropdownArrowGrey9, .coreSpriteDropdownArrowWhite, .coreSpriteFacebookIcon, .coreSpriteFacebookIconInverted {
-    background-image: url(./img/9788b71d1b2d.png);
+    background-image: url(../img/9788b71d1b2d.png);
     background-repeat: no-repeat;
     background-position: -377px -327px;
     height: 6px;
@@ -8886,7 +8886,7 @@ body.fb_hidden {
 }
 
 .coreSpriteFbGlyph, .coreSpriteFeedCreation, .coreSpriteGlyphBlack, .coreSpriteGlyphGradient, .coreSpriteGlyphWhite {
-    background-image: url(./img/9788b71d1b2d.png);
+    background-image: url(../img/9788b71d1b2d.png);
     background-repeat: no-repeat;
     background-position: 0 -388px;
     height: 22px;
@@ -8918,7 +8918,7 @@ body.fb_hidden {
 }
 
 .coreSpriteGooglePlayButton, .coreSpriteHashtag, .coreSpriteHeartFull, .coreSpriteHeartOpen, .coreSpriteHeartSmall {
-    background-image: url(./img/9788b71d1b2d.png);
+    background-image: url(../img/9788b71d1b2d.png);
     background-repeat: no-repeat;
     background-position: 0 -136px;
     height: 41px;
@@ -8948,7 +8948,7 @@ body.fb_hidden {
 }
 
 .coreSpriteHyperlapse, .coreSpriteInputAccepted, .coreSpriteInputError, .coreSpriteInputRefresh, .coreSpriteLeftChevron {
-    background-image: url(./img/9788b71d1b2d.png);
+    background-image: url(../img/9788b71d1b2d.png);
     background-repeat: no-repeat;
     background-position: -259px -115px;
     height: 17px;
@@ -8977,7 +8977,7 @@ body.fb_hidden {
 }
 
 .coreSpriteLeftPaginationArrow, .coreSpriteLikeAnimationHeart, .coreSpriteLocation, .coreSpriteLocationActive {
-    background-image: url(./img/9788b71d1b2d.png);
+    background-image: url(../img/9788b71d1b2d.png);
     background-repeat: no-repeat;
     background-position: -233px -286px;
     height: 40px;
@@ -9002,7 +9002,7 @@ body.fb_hidden {
 }
 
 .coreSpriteLock, .coreSpriteLoggedOutGenericUpsell, .coreSpriteLoggedOutWordmark, .coreSpriteMobileNavActivityActive {
-    background-image: url(./img/9788b71d1b2d.png);
+    background-image: url(../img/9788b71d1b2d.png);
     background-repeat: no-repeat;
     background-position: -255px -37px;
     height: 76px;
@@ -9028,7 +9028,7 @@ body.fb_hidden {
 }
 
 .coreSpriteMobileNavActivityInactive, .coreSpriteMobileNavAddPeopleActive, .coreSpriteMobileNavAddPeopleInactive, .coreSpriteMobileNavDiscoverPeople {
-    background-image: url(./img/9788b71d1b2d.png);
+    background-image: url(../img/9788b71d1b2d.png);
     background-repeat: no-repeat;
     background-position: -182px -336px;
     height: 24px;
@@ -9050,7 +9050,7 @@ body.fb_hidden {
 }
 
 .coreSpriteMobileNavExploreActive, .coreSpriteMobileNavExploreInactive, .coreSpriteMobileNavHomeActive, .coreSpriteMobileNavHomeInactive {
-    background-image: url(./img/9788b71d1b2d.png);
+    background-image: url(../img/9788b71d1b2d.png);
     background-repeat: no-repeat;
     background-position: -286px -336px;
     height: 24px;
@@ -9070,7 +9070,7 @@ body.fb_hidden {
 }
 
 .coreSpriteMobileNavLogo, .coreSpriteMobileNavMenuActive, .coreSpriteMobileNavMenuInactive, .coreSpriteMobileNavProfileActive {
-    background-image: url(./img/9788b71d1b2d.png);
+    background-image: url(../img/9788b71d1b2d.png);
     background-repeat: no-repeat;
     background-position: -355px -274px;
     height: 25px;
@@ -9092,7 +9092,7 @@ body.fb_hidden {
 }
 
 .coreSpriteMobileNavProfileInactive, .coreSpriteMobileNavSearchActive, .coreSpriteMobileNavSearchInactive, .coreSpriteMobileNavSettings {
-    background-image: url(./img/9788b71d1b2d.png);
+    background-image: url(../img/9788b71d1b2d.png);
     background-repeat: no-repeat;
     background-position: -387px -130px;
     height: 24px;
@@ -9112,7 +9112,7 @@ body.fb_hidden {
 }
 
 .coreSpriteMobileNavTypeLogo, .coreSpriteNotificationLeftChevron, .coreSpriteNotificationRightChevron, .coreSpriteNullProfile {
-    background-image: url(./img/9788b71d1b2d.png);
+    background-image: url(../img/9788b71d1b2d.png);
     background-repeat: no-repeat;
     background-position: -122px -179px;
     height: 29px;
@@ -9139,7 +9139,7 @@ body.fb_hidden {
 }
 
 .coreSpriteOptionsEllipsis, .coreSpriteOptionsEllipsisLight, .coreSpritePagingChevron, .coreSpritePlayIconSmall {
-    background-image: url(./img/9788b71d1b2d.png);
+    background-image: url(../img/9788b71d1b2d.png);
     background-repeat: no-repeat;
     background-position: -297px -115px;
     height: 16px;
@@ -9163,7 +9163,7 @@ body.fb_hidden {
 }
 
 .coreSpritePrivateLock, .coreSpriteProfileCamera, .coreSpriteProfileGrid, .coreSpriteProfileGridActive {
-    background-image: url(./img/9788b71d1b2d.png);
+    background-image: url(../img/9788b71d1b2d.png);
     background-repeat: no-repeat;
     background-position: -316px -222px;
     height: 36px;
@@ -9187,7 +9187,7 @@ body.fb_hidden {
 }
 
 .coreSpriteProfileSave, .coreSpriteProfileSaveActive, .coreSpriteReload, .coreSpriteRightChevron, .coreSpriteRightPaginationArrow {
-    background-image: url(./img/9788b71d1b2d.png);
+    background-image: url(../img/9788b71d1b2d.png);
     background-repeat: no-repeat;
     background-position: -387px -260px;
     height: 24px;
@@ -9217,7 +9217,7 @@ body.fb_hidden {
 }
 
 .coreSpriteSaveFull, .coreSpriteSaveLightFull, .coreSpriteSaveLightOpen, .coreSpriteSaveNull, .coreSpriteSaveOpen, .coreSpriteSaveStory {
-    background-image: url(./img/9788b71d1b2d.png);
+    background-image: url(../img/9788b71d1b2d.png);
     background-repeat: no-repeat;
     background-position: -26px -336px;
     height: 24px;
@@ -9249,7 +9249,7 @@ body.fb_hidden {
 }
 
 .coreSpriteSearchClear, .coreSpriteSearchIcon, .coreSpriteSensitivityIcon, .coreSpriteSensitivityIconSmall {
-    background-image: url(./img/9788b71d1b2d.png);
+    background-image: url(../img/9788b71d1b2d.png);
     background-repeat: no-repeat;
     background-position: -333px -37px;
     height: 20px;
@@ -9275,7 +9275,7 @@ body.fb_hidden {
 }
 
 .coreSpriteSidecarIconLarge, .coreSpriteSidecarIconSmall, .coreSpriteSpeechBubbleSmall, .coreSpriteSpinsta, .coreSpriteSpinstaNux {
-    background-image: url(./img/9788b71d1b2d.png);
+    background-image: url(../img/9788b71d1b2d.png);
     background-repeat: no-repeat;
     background-position: -100px -286px;
     height: 47px;
@@ -9307,7 +9307,7 @@ body.fb_hidden {
 }
 
 .coreSpriteSpinstaStory, .coreSpriteStoriesPost, .coreSpriteStoryCreation, .coreSpriteStoryCreationAlt {
-    background-image: url(./img/9788b71d1b2d.png);
+    background-image: url(../img/9788b71d1b2d.png);
     background-repeat: no-repeat;
     background-position: -162px -362px;
     height: 11px;
@@ -9331,7 +9331,7 @@ body.fb_hidden {
 }
 
 .coreSpriteStoryViewCount, .coreSpriteUserTagIndicator, .coreSpriteVerifiedBadge, .coreSpriteVerifiedBadgeSmall {
-    background-image: url(./img/9788b71d1b2d.png);
+    background-image: url(../img/9788b71d1b2d.png);
     background-repeat: no-repeat;
     background-position: -122px -210px;
     height: 10px;
@@ -9357,7 +9357,7 @@ body.fb_hidden {
 }
 
 .coreSpriteVideoIconLarge, .coreSpriteVideoIconSmall, .coreSpriteVideoNux, .coreSpriteViewCount, .coreSpriteWindowsStoreButton {
-    background-image: url(./img/9788b71d1b2d.png);
+    background-image: url(../img/9788b71d1b2d.png);
     background-repeat: no-repeat;
     background-position: 0 -286px;
     height: 48px;
@@ -9390,7 +9390,7 @@ body.fb_hidden {
 
 @media (min-device-pixel-ratio: 1.5),(-webkit-min-device-pixel-ratio: 1.5),(min-resolution: 144dpi) {
     .coreSpriteActivityHeart, .coreSpriteAddPhoto, .coreSpriteAddText {
-        background-image: url(./img/5e9cc261d256.png);
+        background-image: url(../img/5e9cc261d256.png);
         background-size: 405px 379px;
         background-position: -189px -218px
     }
@@ -9404,7 +9404,7 @@ body.fb_hidden {
     }
 
     .coreSpriteAppIcon, .coreSpriteAppStoreButton, .coreSpriteBoomerang, .coreSpriteCameraActive, .coreSpriteCameraInactive {
-        background-image: url(./img/5e9cc261d256.png);
+        background-image: url(../img/5e9cc261d256.png);
         background-size: 405px 379px;
         background-position: -98px -281px
     }
@@ -9426,7 +9426,7 @@ body.fb_hidden {
     }
 
     .coreSpriteChevronDownGrey, .coreSpriteChevronRight, .coreSpriteClose, .coreSpriteCloseLight, .coreSpriteComment {
-        background-image: url(./img/5e9cc261d256.png);
+        background-image: url(../img/5e9cc261d256.png);
         background-size: 405px 379px;
         background-position: -176px -113px
     }
@@ -9448,7 +9448,7 @@ body.fb_hidden {
     }
 
     .coreSpriteDesktopNavActivity, .coreSpriteDesktopNavExplore, .coreSpriteDesktopNavLogoAndWordmark, .coreSpriteDesktopNavProfile {
-        background-image: url(./img/5e9cc261d256.png);
+        background-image: url(../img/5e9cc261d256.png);
         background-size: 405px 379px;
         background-position: -353px -298px
     }
@@ -9466,7 +9466,7 @@ body.fb_hidden {
     }
 
     .coreSpriteDismissLarge, .coreSpriteDismissSmall, .coreSpriteDropdownArrowBlue5, .coreSpriteDropdownArrowBlue6 {
-        background-image: url(./img/5e9cc261d256.png);
+        background-image: url(../img/5e9cc261d256.png);
         background-size: 405px 379px;
         background-position: -216px -113px
     }
@@ -9484,7 +9484,7 @@ body.fb_hidden {
     }
 
     .coreSpriteDropdownArrowGrey9, .coreSpriteDropdownArrowWhite, .coreSpriteFacebookIcon, .coreSpriteFacebookIconInverted {
-        background-image: url(./img/5e9cc261d256.png);
+        background-image: url(../img/5e9cc261d256.png);
         background-size: 405px 379px;
         background-position: -397px -348px
     }
@@ -9502,7 +9502,7 @@ body.fb_hidden {
     }
 
     .coreSpriteFbGlyph, .coreSpriteFeedCreation, .coreSpriteGlyphBlack, .coreSpriteGlyphGradient, .coreSpriteGlyphWhite {
-        background-image: url(./img/5e9cc261d256.png);
+        background-image: url(../img/5e9cc261d256.png);
         background-size: 405px 379px;
         background-position: -330px -59px
     }
@@ -9524,7 +9524,7 @@ body.fb_hidden {
     }
 
     .coreSpriteGooglePlayButton, .coreSpriteHashtag, .coreSpriteHeartFull, .coreSpriteHeartOpen, .coreSpriteHeartSmall {
-        background-image: url(./img/5e9cc261d256.png);
+        background-image: url(../img/5e9cc261d256.png);
         background-size: 405px 379px;
         background-position: 0 -134px
     }
@@ -9546,7 +9546,7 @@ body.fb_hidden {
     }
 
     .coreSpriteHyperlapse, .coreSpriteInputAccepted, .coreSpriteInputError, .coreSpriteInputRefresh, .coreSpriteLeftChevron {
-        background-image: url(./img/5e9cc261d256.png);
+        background-image: url(../img/5e9cc261d256.png);
         background-size: 405px 379px;
         background-position: -384px -222px
     }
@@ -9568,7 +9568,7 @@ body.fb_hidden {
     }
 
     .coreSpriteLeftPaginationArrow, .coreSpriteLikeAnimationHeart, .coreSpriteLocation, .coreSpriteLocationActive {
-        background-image: url(./img/5e9cc261d256.png);
+        background-image: url(../img/5e9cc261d256.png);
         background-size: 405px 379px;
         background-position: -139px -281px
     }
@@ -9586,7 +9586,7 @@ body.fb_hidden {
     }
 
     .coreSpriteLock, .coreSpriteLoggedOutGenericUpsell, .coreSpriteLoggedOutWordmark, .coreSpriteMobileNavActivityActive {
-        background-image: url(./img/5e9cc261d256.png);
+        background-image: url(../img/5e9cc261d256.png);
         background-size: 405px 379px;
         background-position: -253px -36px
     }
@@ -9604,7 +9604,7 @@ body.fb_hidden {
     }
 
     .coreSpriteMobileNavActivityInactive, .coreSpriteMobileNavAddPeopleActive, .coreSpriteMobileNavAddPeopleInactive {
-        background-image: url(./img/5e9cc261d256.png);
+        background-image: url(../img/5e9cc261d256.png);
         background-size: 405px 379px;
         background-position: -125px -330px
     }
@@ -9618,7 +9618,7 @@ body.fb_hidden {
     }
 
     .coreSpriteMobileNavDiscoverPeople, .coreSpriteMobileNavExploreActive, .coreSpriteMobileNavExploreInactive, .coreSpriteMobileNavHomeActive {
-        background-image: url(./img/5e9cc261d256.png);
+        background-image: url(../img/5e9cc261d256.png);
         background-size: 405px 379px;
         background-position: -225px -176px
     }
@@ -9636,7 +9636,7 @@ body.fb_hidden {
     }
 
     .coreSpriteMobileNavHomeInactive, .coreSpriteMobileNavLogo, .coreSpriteMobileNavMenuActive, .coreSpriteMobileNavMenuInactive {
-        background-image: url(./img/5e9cc261d256.png);
+        background-image: url(../img/5e9cc261d256.png);
         background-size: 405px 379px;
         background-position: -300px -330px
     }
@@ -9654,7 +9654,7 @@ body.fb_hidden {
     }
 
     .coreSpriteMobileNavProfileActive, .coreSpriteMobileNavProfileInactive, .coreSpriteMobileNavSearchActive {
-        background-image: url(./img/5e9cc261d256.png);
+        background-image: url(../img/5e9cc261d256.png);
         background-size: 405px 379px;
         background-position: -25px -355px
     }
@@ -9668,7 +9668,7 @@ body.fb_hidden {
     }
 
     .coreSpriteMobileNavSearchInactive, .coreSpriteMobileNavSettings, .coreSpriteMobileNavTypeLogo, .coreSpriteNotificationLeftChevron {
-        background-image: url(./img/5e9cc261d256.png);
+        background-image: url(../img/5e9cc261d256.png);
         background-size: 405px 379px;
         background-position: -100px -355px
     }
@@ -9686,7 +9686,7 @@ body.fb_hidden {
     }
 
     .coreSpriteNotificationRightChevron, .coreSpriteNullProfile, .coreSpriteOptionsEllipsis, .coreSpriteOptionsEllipsisLight {
-        background-image: url(./img/5e9cc261d256.png);
+        background-image: url(../img/5e9cc261d256.png);
         background-size: 405px 379px;
         background-position: -384px -348px
     }
@@ -9704,7 +9704,7 @@ body.fb_hidden {
     }
 
     .coreSpritePagingChevron, .coreSpritePlayIconSmall, .coreSpritePrivateLock, .coreSpriteProfileCamera, .coreSpriteProfileGrid {
-        background-image: url(./img/5e9cc261d256.png);
+        background-image: url(../img/5e9cc261d256.png);
         background-size: 405px 379px;
         background-position: -225px -355px
     }
@@ -9726,7 +9726,7 @@ body.fb_hidden {
     }
 
     .coreSpriteProfileGridActive, .coreSpriteProfileSave, .coreSpriteProfileSaveActive, .coreSpriteReload, .coreSpriteRightChevron {
-        background-image: url(./img/5e9cc261d256.png);
+        background-image: url(../img/5e9cc261d256.png);
         background-size: 405px 379px;
         background-position: -250px -330px
     }
@@ -9748,7 +9748,7 @@ body.fb_hidden {
     }
 
     .coreSpriteRightPaginationArrow, .coreSpriteSaveFull, .coreSpriteSaveLightFull, .coreSpriteSaveLightOpen {
-        background-image: url(./img/5e9cc261d256.png);
+        background-image: url(../img/5e9cc261d256.png);
         background-size: 405px 379px;
         background-position: -303px -134px
     }
@@ -9766,7 +9766,7 @@ body.fb_hidden {
     }
 
     .coreSpriteSaveNull, .coreSpriteSaveOpen, .coreSpriteSaveStory, .coreSpriteSearchClear, .coreSpriteSearchIcon {
-        background-image: url(./img/5e9cc261d256.png);
+        background-image: url(../img/5e9cc261d256.png);
         background-size: 405px 379px;
         background-position: -126px -218px
     }
@@ -9788,7 +9788,7 @@ body.fb_hidden {
     }
 
     .coreSpriteSensitivityIcon, .coreSpriteSensitivityIconSmall, .coreSpriteSpeechBubbleSmall, .coreSpriteSpinsta {
-        background-image: url(./img/5e9cc261d256.png);
+        background-image: url(../img/5e9cc261d256.png);
         background-size: 405px 379px;
         background-position: 0 -281px
     }
@@ -9806,7 +9806,7 @@ body.fb_hidden {
     }
 
     .coreSpriteSpinstaNux, .coreSpriteSpinstaStory, .coreSpriteStoriesPost, .coreSpriteStoryCreation, .coreSpriteStoryCreationAlt {
-        background-image: url(./img/5e9cc261d256.png);
+        background-image: url(../img/5e9cc261d256.png);
         background-size: 405px 379px;
         background-position: -312px -281px
     }
@@ -9828,7 +9828,7 @@ body.fb_hidden {
     }
 
     .coreSpriteStoryViewCount, .coreSpriteUserTagIndicator, .coreSpriteVerifiedBadge, .coreSpriteVerifiedBadgeSmall {
-        background-image: url(./img/5e9cc261d256.png);
+        background-image: url(../img/5e9cc261d256.png);
         background-size: 405px 379px;
         background-position: -202px -113px
     }
@@ -9846,7 +9846,7 @@ body.fb_hidden {
     }
 
     .coreSpriteVideoIconLarge, .coreSpriteVideoIconSmall, .coreSpriteVideoNux, .coreSpriteViewCount, .coreSpriteWindowsStoreButton {
-        background-image: url(./img/5e9cc261d256.png);
+        background-image: url(../img/5e9cc261d256.png);
         background-size: 405px 379px;
         background-position: -49px -281px
     }
@@ -13778,4 +13778,9 @@ a._l8p4s, a._l8p4s:visited {
     position: absolute;
     right: 12px;
     top: 12px;
+}
+
+.input {
+    display: inline-block;
+    width: 100%;
 }
