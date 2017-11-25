@@ -21,6 +21,11 @@ public class IfOnlyGramRest {
         return profileGenerateService.generateProfile(name, blogCategory);
     }
 
+    @RequestMapping(value = "/blogCategories", method = GET)
+    public BlogCategory[] getBlogCategories() {
+        return BlogCategory.values();
+    }
+
     @RequestMapping(value = "/testAPI", method = GET)
     public String testApi() {
         return "BOO!!";

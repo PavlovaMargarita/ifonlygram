@@ -6,6 +6,7 @@ import java.util.List;
 public class Profile {
     private String name;
     private String profilePicture;
+    private String profileDescription;
     private List<Publication> publications = new ArrayList<Publication>();
 
     public Profile() {}
@@ -32,5 +33,14 @@ public class Profile {
 
     public void setPublications(List<Publication> publications) {
         this.publications = publications;
+    }
+
+
+    public String getProfileDescription() {
+        return profileDescription;
+    }
+
+    public void setProfileDescription(String profileDescription) {
+        this.profileDescription = profileDescription;
     }
 }
