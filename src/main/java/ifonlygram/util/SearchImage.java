@@ -13,12 +13,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SearchImage {
-    private static String WEATHER_URL = "https://api.qwant.com/api/search/images?count=10&offset=1&q=";
+    private static final String QWANT_API_URL = "https://api.qwant.com/api/search/images?count=10&offset=1&q=";
 
     public static List<String> findImageUrlByParameters(final List<String> param) {
-        WEATHER_URL += String.join("+", param);
-        System.out.println(WEATHER_URL);////////////////
-        URL url = SearchImage.createUrl(WEATHER_URL); // создаем объект URL из указанной в параметре строки
+        final String requestURL = QWANT_API_URL + String.join("+", param);
+        System.out.println(requestURL);////////////////
+        URL url = SearchImage.createUrl(requestURL); // создаем объект URL из указанной в параметре строки
         String resultJson = SearchImage.parseUrl(url);
         List linksIMG = SearchImage.parseCurrentIMGJson(resultJson);
         return linksIMG;
