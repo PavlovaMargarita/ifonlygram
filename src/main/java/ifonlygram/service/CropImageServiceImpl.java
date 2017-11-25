@@ -4,6 +4,7 @@ import ifonlygram.external.CloudinaryApiClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -37,6 +38,8 @@ public class CropImageServiceImpl implements CropImageService {
             }
         }
 
+        deleteImage(originalImagePath);
+        deleteImage(croppedImagePath);
         return croppedImageUrl;
     }
 
@@ -60,6 +63,19 @@ public class CropImageServiceImpl implements CropImageService {
             e.printStackTrace();
         }
 
+    }
+
+    private void deleteImage(final String imagePath) {
+        try{
+            File file = new File(imagePath);
+            if(file.delete()){
+                System.out.println(file.getName() + " is deleted!");
+            }else{
+                System.out.println("Delete operation is failed.");
+            }
+        }catch(Exception e){
+            e.printStackTrace();
+        }
     }
 
 }
