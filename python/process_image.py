@@ -4,7 +4,7 @@ import argparse
 from PIL import Image
 from PIL import ImageOps
 
-THRESHOLD = 0.7
+THRESHOLD = 0.2
 SIZE = 640
 
 # initialize the list of class labels MobileNet SSD was trained to
@@ -64,7 +64,7 @@ def union(a, b):
 
 def process_image(file = "Fashion.jpg"):
     print("Process image start")
-    net = cv2.dnn.readNetFromCaffe("MobileNetSSD_deploy.prototxt", "MobileNetSSD_deploy.caffemodel")
+    net = cv2.dnn.readNetFromCaffe("python/MobileNetSSD_deploy.prototxt", "python/MobileNetSSD_deploy.caffemodel")
     image = cv2.imread(file)
     (h, w) = image.shape[:2]
     blob = cv2.dnn.blobFromImage(cv2.resize(image, (300, 300)), 0.007843, (300, 300), 127.5)
@@ -104,7 +104,7 @@ def process_image(file = "Fashion.jpg"):
     im = Image.open(file)
     fit = ImageOps.fit(im, (SIZE, SIZE), centering=rect_center)
     print("preparing to send cropped image")
-    fit.save("processed_" + file)
+    fit.save("croppedimages/processed.jpg")
 
 if __name__ == '__main__':
     # construct the argument parse and parse the arguments
