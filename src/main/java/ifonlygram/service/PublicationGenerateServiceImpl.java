@@ -10,7 +10,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
-import static ifonlygram.util.SearchImage.findImageUrlByParameters;
+import static ifonlygram.util.BingSearch.findImageUrlByParameters;
 
 @Component
 public class PublicationGenerateServiceImpl implements PublicationGenerateService {
@@ -32,6 +32,11 @@ public class PublicationGenerateServiceImpl implements PublicationGenerateServic
             }
 
             List<String> urls = findImageUrlByParameters(requestParameters);
+
+//            List<String> urls = new ArrayList<String>(
+//                    Arrays.asList("https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/CindyCrawfordOct09.jpg/250px-CindyCrawfordOct09.jpg",
+//                            "https://i.ytimg.com/vi/gmVWrbrJbhQ/hqdefault.jpg",
+//                            "http://myprodiets.info/wp-content/uploads/2017/05/polina-gagarina-pohudela.jpg"));
 
             List<Publication> publicationList = new ArrayList<Publication>();
             urls.forEach(url -> {
