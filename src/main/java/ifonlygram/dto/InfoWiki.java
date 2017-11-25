@@ -9,6 +9,7 @@ public class InfoWiki {
     private List<String> places;
     private List<String> jobs;
     private List<String> importantPeople;
+    private String avatarURI;
 
     public InfoWiki() {
         places = new ArrayList<>();
@@ -48,6 +49,14 @@ public class InfoWiki {
         this.jobs = jobs;
     }
 
+    public String getAvatarURI() {
+        return avatarURI;
+    }
+
+    public void setAvatarURI(String avatarURI) {
+        this.avatarURI = avatarURI;
+    }
+
     public List<String> getImportantPeople() {
         return importantPeople;
     }
@@ -57,7 +66,15 @@ public class InfoWiki {
     }
 
     public void addPlaces(List<String> placeList) {
-        places.addAll(placeList);
+        for(String place:placeList) {
+            places.add(place);
+        }
+    }
+
+    public void addJobs(List<String> jobsList){
+        for(String job:jobsList){
+            jobs.add(job);
+        }
     }
 }
 
