@@ -67,6 +67,10 @@ public class WikipediaParser {
         List<String> importantPeople = getFamily(infoTable);
         infoWiki.setImportantPeople(importantPeople);
 
+        //avatar URI
+        String avatarURI = getAvatarUrl(infoTable);
+        infoWiki.setAvatarURI(avatarURI);
+
         return infoWiki;
     }
 
@@ -182,4 +186,12 @@ public class WikipediaParser {
         return jobs;
     }
 
+    private String getAvatarUrl(Element infoTable) {
+        Elements dataByWikidataPropertyId = infoTable.getElementsByAttributeValue(DATA_WIKIDATA_PROPERTY_ID, AVATAR_CODE);
+        Elements imageTag = dataByWikidataPropertyId.get(0).getElementsByTag("img");
+        if (imageTag == null || imageTag.isEmpty()) {
+            return EMPTY_STRING;
+        }
+        return imageTag.get(ZERO).attr("src");
+    }
 }
