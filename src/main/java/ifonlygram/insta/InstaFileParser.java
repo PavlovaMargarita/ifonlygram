@@ -18,7 +18,7 @@ public class InstaFileParser implements IInstaFileParser {
 
     @Autowired
     IInstaFileReader fileReader;
-    private static final String FILE_PATH = "IfOnly/instaData.txt";
+    private static final String FILE_PATH = "instaData.txt";
 
     public List<InstaTag> getAllTagList() {
         List<String> content = fileReader.readLinesFromFile(FILE_PATH);
