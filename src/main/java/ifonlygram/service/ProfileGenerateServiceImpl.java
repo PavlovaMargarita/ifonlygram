@@ -69,7 +69,7 @@ public class ProfileGenerateServiceImpl implements ProfileGenerateService {
         final List<String> wikiParameters = new ArrayList<String>();
         wikiParameters.add(infoWiki.getYearOfBirth().toString());
         wikiParameters.add(infoWiki.getYearOfDeath().toString());
-        wikiParameters.add(infoWiki.getJob());
+        wikiParameters.addAll(infoWiki.getJobs());
         wikiParameters.addAll(infoWiki.getImportantPeople());
         wikiParameters.addAll(infoWiki.getPlaces());
         return wikiParameters;
