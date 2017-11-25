@@ -1,4 +1,4 @@
-const SERVER = 'http://10.168.0.160:8080';
+const SERVER = 'http://10.168.1.21:8080';
 
 function sendRequest(url, method = 'GET') {
     return new Promise((resolve, reject) => {
@@ -25,6 +25,14 @@ function removeChildren(domElement) {
     }
 }
 
+function setImage(id, url) {
+    document.getElementById(id).src = url;
+}
+
+function setText(id, text) {
+    document.getElementById(id).innerText = text;
+}
+
 function relocateTo(url) {
-    window.location.href =  + url;
+    window.location.href = url;
 }
