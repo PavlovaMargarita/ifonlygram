@@ -58,8 +58,10 @@ public class WikipediaParser {
         infoWiki.setYearOfDeath(deathYear);
 
         //job
-        List<String> jobs = getJobByPropertyId(infoTable, JOB_CODE);
-        infoWiki.setJobs(jobs);
+        List<String> jobsByCode = getJobByPropertyId(infoTable, JOB_CODE);
+        infoWiki.addJobs(jobsByCode);
+        List<String> jobsByStyleFilter = getJobsByStyleFilter(infoTable);
+        infoWiki.addJobs(jobsByStyleFilter);
 
         //family
         List<String> importantPeople = getFamily(infoTable);
@@ -89,10 +91,10 @@ public class WikipediaParser {
                     Elements paragraphs = familyCells.get(j).getElementsByTag("p");
                     if (!paragraphs.isEmpty()) {
                         Elements links = paragraphs.get(ZERO).getElementsByTag("a");
-                        if (links != null) {
-                            links.get(ZERO).ownText();
-                        } else {
+                        if (links == null || links.isEmpty()) {
                             familyMembersList.add(paragraphs.get(ZERO).ownText());
+                        } else {
+                            links.get(ZERO).ownText();
                             continue;
                         }
                     }
@@ -162,4 +164,22 @@ public class WikipediaParser {
         }
         return formattedName;
     }
+
+    private List<String> getJobsByStyleFilter(Element infoTable) {
+        Elements dataByWikidataPropertyId = infoTable.getElementsByAttributeValue(STYLE, JOB_STYLE);
+        if (dataByWikidataPropertyId.isEmpty()) {
+            return Collections.EMPTY_LIST;
+        }
+        List<String> jobs = new ArrayList();
+        for (int k = 0; k < dataByWikidataPropertyId.size(); k++) {
+            Elements elem = dataByWikidataPropertyId.get(k).select("a");
+            if (elem.isEmpty()) {
+                jobs.add(dataByWikidataPropertyId.get(k).ownText());
+            } else {
+                jobs.add(elem.get(0).ownText());
+            }
+        }
+        return jobs;
+    }
+
 }

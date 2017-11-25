@@ -20,4 +20,6 @@ public class WikipediaParserConstants {
 
     public static final String DATA_WIKIDATA_PROPERTY_ID = "data-wikidata-property-id";
     public static final String TITLE = "title";
+    public static final String STYLE="style";
+    public static final String JOB_STYLE = "text-align:center; font-size:130%; background:lavender; vertical-align: middle;";
 }
