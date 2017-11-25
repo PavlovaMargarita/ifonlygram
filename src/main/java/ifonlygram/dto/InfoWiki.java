@@ -1,13 +1,20 @@
 package ifonlygram.dto;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class InfoWiki {
     private Integer yearOfBirth;
     private Integer yearOfDeath;
     private List<String> places;
-    private String job;
+    private List<String> jobs;
     private List<String> importantPeople;
+
+    public InfoWiki() {
+        places = new ArrayList<>();
+        jobs = new ArrayList<>();
+        importantPeople = new ArrayList<>();
+    }
 
     public Integer getYearOfBirth() {
         return yearOfBirth;
@@ -33,12 +40,12 @@ public class InfoWiki {
         this.places = places;
     }
 
-    public String getJob() {
-        return job;
+    public List<String> getJobs() {
+        return jobs;
     }
 
-    public void setJob(String job) {
-        this.job = job;
+    public void setJobs(List<String> jobs) {
+        this.jobs = jobs;
     }
 
     public List<String> getImportantPeople() {
@@ -47,6 +54,10 @@ public class InfoWiki {
 
     public void setImportantPeople(List<String> importantPeople) {
         this.importantPeople = importantPeople;
+    }
+
+    public void addPlaces(List<String> placeList) {
+        places.addAll(placeList);
     }
 }
 
