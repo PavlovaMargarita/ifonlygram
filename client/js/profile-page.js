@@ -32,18 +32,21 @@ function sendGenerateProfile(name, category) {
 }
 
 function parseProfileData(data) {
-    const { name, profileDescription, profilePicture, publications } = data;
+    let { name, profileDescription, profilePicture, publications } = data;
+    const publicationsNumber = publications.length;
+    profilePicture = profilePicture || (publications && publications[publicationsNumber - 1].imageUrl);
     setImage('profile-image', profilePicture);
     setText('profile-name', name);
     setText('description', profileDescription);
     setText('publications-number', publications.length);
 
     const publicationsElement = document.getElementById('publications');
-    const rowsNumber = Math.ceil(publications.length / 3);
+    const rowsNumber = Math.ceil(publicationsNumber / 3);
 
     for(let i = 0; i < rowsNumber; i++) {
+        let rowNumber = i * 3;
         publicationsElement.appendChild(
-            createPublicationsRow(name, publications[i], publications[i+1], publications[i+2])
+            createPublicationsRow(name, publications[rowNumber], publications[rowNumber+1], publications[rowNumber+2])
         );
     }
 }
