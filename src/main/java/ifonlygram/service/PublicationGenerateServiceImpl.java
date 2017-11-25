@@ -10,7 +10,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
-import static ifonlygram.util.SearchImage.findImageUrlByParameters;
+import static ifonlygram.util.BingSearch.findImageUrlByParameters;
 
 @Component
 public class PublicationGenerateServiceImpl implements PublicationGenerateService {
