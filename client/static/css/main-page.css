@@ -13779,3 +13779,8 @@ a._l8p4s, a._l8p4s:visited {
     right: 12px;
     top: 12px;
 }
+
+.input {
+    display: inline-block;
+    width: 100%;
+}
