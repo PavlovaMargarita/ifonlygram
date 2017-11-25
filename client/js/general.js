@@ -1,4 +1,7 @@
-const SERVER = 'http://10.168.1.21:8080';
+const IRA_SERVER = 'http://10.168.1.21:8080';
+const MARGARITA_SERVER = 'http://10.168.0.160:8090';
+
+const SERVER = MARGARITA_SERVER;
 
 function sendRequest(url, method = 'GET') {
     return new Promise((resolve, reject) => {

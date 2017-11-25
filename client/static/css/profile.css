@@ -6932,7 +6932,7 @@ body.fb_hidden {
 
 .publ-image {
     width: 293px;
-    height: 293px   ;
+    height: 293px;
     object-fit: cover;
 }
 
@@ -8743,6 +8743,10 @@ a._sb9lc, a._sb9lc:visited {
     -webkit-flex-grow: 1;
     -ms-flex-positive: 1;
     flex-grow: 1
+}
+
+#profile-image {
+    object-fit: cover;
 }
 
 @media (min-width: 736px) {

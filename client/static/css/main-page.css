@@ -393,8 +393,9 @@
 
 .coreSpriteDesktopNavLogoAndWordmark, .coreSpriteDesktopNavProfile {
     background-position: -177px 0;
-    height: 35px;
+    height: 37px;
     width: 176px
+
 }
 
 .coreSpriteDesktopNavProfile {
@@ -582,7 +583,7 @@
 
 .coreSpriteLoggedOutWordmark, .coreSpriteMobileNavActivityActive {
     background-position: 0 0;
-    height: 51px;
+    height: 52px;
     width: 175px
 }
 
@@ -1022,7 +1023,7 @@
     }
 
     .coreSpriteDesktopNavLogoAndWordmark, .coreSpriteDesktopNavProfile {
-        background-position: -176px 0
+        background-position: -176px 1px;
     }
 
     .coreSpriteDesktopNavProfile {
@@ -1072,19 +1073,19 @@
     }
 
     .coreSpriteFeedCreation, .coreSpriteGlyphBlack, .coreSpriteGlyphGradient, .coreSpriteGlyphWhite {
-        background-position: -283px -176px
+        background-position: -283px -176px;
     }
 
     .coreSpriteGlyphBlack, .coreSpriteGlyphGradient, .coreSpriteGlyphWhite {
-        background-position: -353px -31px
+        background-position: -353px -31px;
     }
 
     .coreSpriteGlyphGradient, .coreSpriteGlyphWhite {
-        background-position: -311px -218px
+        background-position: -311px -218px;
     }
 
     .coreSpriteGlyphWhite {
-        background-position: -353px -92px
+        background-position: -353px -92px;
     }
 
     .coreSpriteGooglePlayButton, .coreSpriteHashtag, .coreSpriteHeartFull, .coreSpriteHeartOpen, .coreSpriteHeartSmall {
@@ -8828,7 +8829,7 @@ body.fb_hidden {
 
 .coreSpriteDesktopNavLogoAndWordmark, .coreSpriteDesktopNavProfile {
     background-position: -177px 0;
-    height: 35px;
+    height: 37px;
     width: 176px
 }
 
@@ -9017,7 +9018,7 @@ body.fb_hidden {
 
 .coreSpriteLoggedOutWordmark, .coreSpriteMobileNavActivityActive {
     background-position: 0 0;
-    height: 51px;
+    height: 52px;
     width: 175px
 }
 
@@ -9458,7 +9459,7 @@ body.fb_hidden {
     }
 
     .coreSpriteDesktopNavLogoAndWordmark, .coreSpriteDesktopNavProfile {
-        background-position: -176px 0
+        background-position: -176px 1px;
     }
 
     .coreSpriteDesktopNavProfile {
