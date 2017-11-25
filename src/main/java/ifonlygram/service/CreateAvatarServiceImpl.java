@@ -9,21 +9,21 @@ import static ifonlygram.util.FileHelper.deleteImage;
 import static ifonlygram.util.FileHelper.saveImage;
 
 @Component
-public class CropImageServiceImpl implements CropImageService {
+public class CreateAvatarServiceImpl implements CreateAvatarService {
 
-    private static final String PYTHON_CROP_SCRIPT = "python/process_image.py";
+    private static final String PYTHON_AVATAR_SCRIPT = "python/create_avatar.py";
 
     @Autowired
     private CloudinaryApiClient cloudinaryApiClient;
 
     @Override
-    public String cropImage(String originalUrl) {
-        final String originalImagePath = "croppedimages/originalimage.jpg";
+    public String createAvatar(String originalUrl) {
+        final String originalImagePath = "avatar/originalimage.jpg";
         saveImage(originalUrl, originalImagePath);
 
-        executePython(PYTHON_CROP_SCRIPT, "originalimage.jpg");
+        executePython(PYTHON_AVATAR_SCRIPT, originalImagePath);
 
-        final String croppedImagePath = "croppedimages/processed.jpg";
+        final String croppedImagePath = "avatar/processed.jpg";
         String croppedImageUrl = null;
         try {
             croppedImageUrl = cloudinaryApiClient.saveImage(croppedImagePath);
