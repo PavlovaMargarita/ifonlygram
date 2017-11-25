@@ -63,6 +63,7 @@ def union(a, b):
 
 
 def process_image(file = "Fashion.jpg"):
+    print("Process image start")
     net = cv2.dnn.readNetFromCaffe("MobileNetSSD_deploy.prototxt", "MobileNetSSD_deploy.caffemodel")
     image = cv2.imread(file)
     (h, w) = image.shape[:2]
@@ -86,6 +87,7 @@ def process_image(file = "Fashion.jpg"):
 
             boxes.append(Box((startX, startY, endX, endY), confidence, CLASSES[idx]))
 
+    print("some objects found")
     union_rect = None
     for i in range(len(boxes)):
         if i is 0:
@@ -101,6 +103,7 @@ def process_image(file = "Fashion.jpg"):
 
     im = Image.open(file)
     fit = ImageOps.fit(im, (SIZE, SIZE), centering=rect_center)
+    print("preparing to send cropped image")
     fit.save("processed_" + file)
 
 if __name__ == '__main__':
