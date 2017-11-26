@@ -2,6 +2,9 @@ const IRA_SERVER = 'http://10.168.1.21:8080';
 const MARGARITA_SERVER = 'http://10.168.0.160:8090';
 
 const SERVER = MARGARITA_SERVER;
+const ifilters = ['_1977', 'moon', 'nashville',
+  'aden', 'amaro', 'brannan', 'brooklyn',
+  'toaster', 'reyes']
 
 function sendRequest(url, method = 'GET') {
     return new Promise((resolve, reject) => {
