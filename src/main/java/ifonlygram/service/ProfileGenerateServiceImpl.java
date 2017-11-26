@@ -58,6 +58,7 @@ public class ProfileGenerateServiceImpl implements ProfileGenerateService {
             });
 
             allPublication.addAll(publications);
+            if(allPublication.size() >= TAG_COUNT) break;
         }
 
         Collections.shuffle(allPublication);
@@ -76,6 +77,7 @@ public class ProfileGenerateServiceImpl implements ProfileGenerateService {
         wikiParameters.addAll(infoWiki.getJobs());
         wikiParameters.addAll(infoWiki.getImportantPeople());
         wikiParameters.addAll(infoWiki.getPlaces());
+        Collections.shuffle(wikiParameters);
         return wikiParameters;
     }
 
