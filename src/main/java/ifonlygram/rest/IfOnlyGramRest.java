@@ -20,8 +20,12 @@ public class IfOnlyGramRest {
 
     @RequestMapping(value = "/generateProfile", method = GET)
     public Profile getProfile(@RequestParam("name") final String name, @RequestParam("blogCategory") final BlogCategory blogCategory) {
-        System.out.println(String.format("call generateProfile with name %s and blog category %s", name, blogCategory));
-        return profileGenerateService.generateProfile(name, blogCategory);
+        try{
+            System.out.println(String.format("call generateProfile with name %s and blog category %s", name, blogCategory));
+            return profileGenerateService.generateProfile(name, blogCategory);
+        }catch (Exception exc){
+            return null;
+        }
     }
 
     @RequestMapping(value = "/blogCategories", method = GET)
