@@ -5,6 +5,7 @@ import java.util.List;
 
 public class Publication {
     private String imageUrl;
+    private String croppedUrl;
     private String description;
     private String location;
     private List<String> tags = new ArrayList<String>();
@@ -41,5 +42,13 @@ public class Publication {
 
     public void setTags(List<String> tags) {
         this.tags = tags;
+    }
+
+    public String getCroppedUrl() {
+        return croppedUrl;
+    }
+
+    public void setCroppedUrl(String croppedUrl) {
+        this.croppedUrl = croppedUrl;
     }
 }

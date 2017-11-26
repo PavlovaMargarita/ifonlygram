@@ -6695,19 +6695,20 @@ body.fb_hidden {
     width: 100%
 }
 
-._4rbun {
+._4rbun,
+#dialog-img-wrapper {
     display: block;
     overflow: hidden;
     padding-bottom: 100%
 }
 
-._2di5p, ._si7dy {
+._2di5p, ._si7dy, #dialog-image {
     left: 0;
     position: absolute;
     top: 0
 }
 
-._2di5p {
+._2di5p, #dialog-image {
     height: 100%;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -8761,15 +8762,23 @@ a._sb9lc, a._sb9lc:visited {
     display: none;
 }
 
+#dialog ._sxolz {
+    background-color: #fff;
+}
+
 #dialog-image-container {
     background-color: transparent;
 }
 
 #dialog-image {
-    object-fit: contain;
+    object-fit: cover;
     height: auto;
     width: auto;
     right: 0;
+    top: 0;
+
+    min-height: 100%;
+    max-width: 100%;
 }
 
 .full-height {

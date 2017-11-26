@@ -2,6 +2,11 @@ const IRA_SERVER = 'http://10.168.1.21:8080';
 const MARGARITA_SERVER = 'http://10.168.0.160:8090';
 
 const SERVER = MARGARITA_SERVER;
+const IFILTERS = [
+    '_1977', 'moon', 'nashville',
+    'aden', 'amaro', 'brannan',
+    'brooklyn', 'toaster', 'reyes'
+];
 
 function sendRequest(url, method = 'GET') {
     return new Promise((resolve, reject) => {
@@ -42,4 +47,18 @@ function eachClassElement(className, callback, root = document) {
 
 function relocateTo(url) {
     window.location.href = url;
+}
+
+function disableClicks(root = document) {
+    const allLinksElements = root.querySelectorAll('a:not(enable)');
+    const allButtonsElements = root.querySelectorAll('buttons:not(enable)');
+
+    Array.prototype.forEach.call(
+        allLinksElements,
+        (elem) => elem.addEventListener('click', (e) => e.preventDefault())
+    );
+    Array.prototype.forEach.call(
+        allButtonsElements,
+        (elem) => elem.addEventListener('click', (e) => e.preventDefault())
+    );
 }
