@@ -11,7 +11,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.StringTokenizer;
 
 import static ifonlygram.parser.WikipediaParserConstants.*;
 
@@ -19,14 +18,10 @@ import static ifonlygram.parser.WikipediaParserConstants.*;
 public class WikipediaParser {
 
     public InfoWiki parse(String name) {
-        if (name == null || name.isEmpty()) {
-            return new InfoWiki();
-        }
-        String formattedName = getFormatedName(name);
-
+        String wikipediaSearchURI =  getWikiSearchURI(name);
         Document doc;
         try {
-            doc = Jsoup.connect(SEARCH_URL + formattedName).timeout(TIMEOUT).get();
+            doc = Jsoup.connect(wikipediaSearchURI).timeout(TIMEOUT).get();
         } catch (IOException exc) {
             System.out.println(exc);
             return new InfoWiki();
@@ -114,12 +109,15 @@ public class WikipediaParser {
         return Collections.EMPTY_LIST;
     }
 
-    private static List<String> getPlacesByPropertyId(Element infoTable, String propertyId) {
+    private List<String> getPlacesByPropertyId(Element infoTable, String propertyId) {
         Elements dataByWikidataPropertyId = infoTable.getElementsByAttributeValue(DATA_WIKIDATA_PROPERTY_ID, propertyId);
         if (dataByWikidataPropertyId.isEmpty()) {
             return Collections.EMPTY_LIST;
         }
         Elements titlesInDataWikidataPropertyId = dataByWikidataPropertyId.get(ZERO).getElementsByAttribute(TITLE);
+        if (titlesInDataWikidataPropertyId == null || titlesInDataWikidataPropertyId.isEmpty()) {
+            return Collections.EMPTY_LIST;
+        }
         List<String> places = new ArrayList();
         for (int i = 0; i < titlesInDataWikidataPropertyId.size(); i++) {
             places.add(titlesInDataWikidataPropertyId.get(i).ownText());
@@ -133,6 +131,9 @@ public class WikipediaParser {
             return Collections.EMPTY_LIST;
         }
         Elements jobsTitles = dataByWikidataPropertyId.get(ZERO).getElementsByAttribute(TITLE);
+        if (jobsTitles == null) {
+            return Collections.EMPTY_LIST;
+        }
         List<String> jobs = new ArrayList<String>();
         for (int i = 0; i < jobsTitles.size(); i++) {
             Element job = jobsTitles.get(i);
@@ -158,20 +159,9 @@ public class WikipediaParser {
         return ZERO;
     }
 
-    private String getFormatedName(String name) {
-        String lowerCaseName = name.toLowerCase();
-        StringTokenizer stringTokenizer = new StringTokenizer(lowerCaseName);
-        String formattedName = new String();
-        while (stringTokenizer.hasMoreTokens()) {
-            String token = stringTokenizer.nextToken();
-            formattedName += token.substring(0, 1).toUpperCase() + token.substring(1) + " ";
-        }
-        return formattedName;
-    }
-
     private List<String> getJobsByStyleFilter(Element infoTable) {
         Elements dataByWikidataPropertyId = infoTable.getElementsByAttributeValue(STYLE, JOB_STYLE);
-        if (dataByWikidataPropertyId.isEmpty()) {
+        if (dataByWikidataPropertyId == null || dataByWikidataPropertyId.isEmpty()) {
             return Collections.EMPTY_LIST;
         }
         List<String> jobs = new ArrayList();
@@ -180,7 +170,7 @@ public class WikipediaParser {
             if (elem.isEmpty()) {
                 jobs.add(dataByWikidataPropertyId.get(k).ownText());
             } else {
-                jobs.add(elem.get(0).ownText());
+                jobs.add(elem.get(ZERO).ownText());
             }
         }
         return jobs;
@@ -188,10 +178,44 @@ public class WikipediaParser {
 
     private String getAvatarUrl(Element infoTable) {
         Elements dataByWikidataPropertyId = infoTable.getElementsByAttributeValue(DATA_WIKIDATA_PROPERTY_ID, AVATAR_CODE);
+        if (dataByWikidataPropertyId == null && dataByWikidataPropertyId.isEmpty()) {
+            return EMPTY_STRING;
+        }
         Elements imageTag = dataByWikidataPropertyId.get(0).getElementsByTag("img");
         if (imageTag == null || imageTag.isEmpty()) {
             return EMPTY_STRING;
         }
         return imageTag.get(ZERO).attr("src");
+    }
+
+    private String getWikiSearchURI(String name) {
+        Document doc;
+        try {
+            doc = Jsoup.connect(BING_SEARCH_URI + name).timeout(TIMEOUT).get();
+        } catch (IOException exc) {
+            System.out.println(exc);
+            return EMPTY_STRING;
+        }
+        Element bResultsElement = doc.body().getElementById(B_RESULTS);
+        if (bResultsElement == null) {
+            return EMPTY_STRING;
+        }
+
+        Elements listItems = bResultsElement.getElementsByTag("li");
+        if (listItems == null) {
+            return EMPTY_STRING;
+        }
+        for (int k = 0; k < listItems.size(); k++) {
+            Element elem = listItems.get(k);
+            Elements links = elem.getElementsByTag("a");
+            if (links == null || links.isEmpty()) {
+                continue;
+            }
+            String href = links.get(0).attr("href");
+            if (href != null && href.contains(WIKIPEDIA)) {
+                return href;
+            }
+        }
+        return EMPTY_STRING;
     }
 }

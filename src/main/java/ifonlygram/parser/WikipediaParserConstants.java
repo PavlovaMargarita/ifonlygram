@@ -5,9 +5,10 @@ public class WikipediaParserConstants {
     public static final Integer ZERO = 0;
     public static final String INFOBOX = "infobox";
     public static final String YEAR_REG_EXPRESSION = "\\d{4}";
-    public static final String SEARCH_URL = "https://ru.wikipedia.org/wiki/";
+    public static final String WIKIPEDIA_SEARCH_URL = "https://ru.wikipedia.org/wiki/";
+    public static final String BING_SEARCH_URI = "https://www.bing.com/search?q=";
     public static final String EMPTY_STRING = "";
-    public static final int TIMEOUT = 5000;
+    public static final int TIMEOUT = 10000;
 
     public static final String PLACE_OF_BIRTH_CODE = "P19";
     public static final String PLACE_OF_DEATH_CODE = "P20";
@@ -24,4 +25,6 @@ public class WikipediaParserConstants {
     public static final String TITLE = "title";
     public static final String STYLE="style";
     public static final String JOB_STYLE = "text-align:center; font-size:130%; background:lavender; vertical-align: middle;";
+    public static final String B_RESULTS = "b_results";
+    public static final String WIKIPEDIA = "wikipedia";
 }
