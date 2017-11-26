@@ -96,16 +96,20 @@ function createPublication(publication = {}, ownerName) {
         .getElementsByClassName('open-dialog')[0]
         .addEventListener('click', (e) => {
             e.preventDefault();
-            openDialog(publication, ownerName);
+            openDialog(publication, ownerName, ifilter);
         });
 
     disableClicks(publicationElement);
     return publicationElement;
 }
 
-function openDialog(publication, ownerName) {
+function openDialog(publication, ownerName, ifilter='') {
     const { description = '', imageUrl = '', location = '', tags = []} = publication;
     const dialog = document.getElementById('dialog');
+    const filterElement = document.getElementById('dialog-img-wrapper');
+
+    filterElement.className = '';
+    filterElement.classList.add(ifilter);
 
     setImage('dialog-image', imageUrl);
     setText('location', location);

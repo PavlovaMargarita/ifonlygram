@@ -6695,19 +6695,20 @@ body.fb_hidden {
     width: 100%
 }
 
-._4rbun {
+._4rbun,
+#dialog-img-wrapper {
     display: block;
     overflow: hidden;
     padding-bottom: 100%
 }
 
-._2di5p, ._si7dy {
+._2di5p, ._si7dy, #dialog-image {
     left: 0;
     position: absolute;
     top: 0
 }
 
-._2di5p {
+._2di5p, #dialog-image {
     height: 100%;
     -webkit-user-select: none;
     -moz-user-select: none;
