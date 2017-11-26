@@ -7,6 +7,8 @@ import ifonlygram.dto.Publication;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.LinkedList;
@@ -14,6 +16,7 @@ import java.util.List;
 
 @Component
 public class ProfileGenerateServiceImpl implements ProfileGenerateService {
+    private static final String UTF_8 = "UTF-8";
     private static final int TAG_COUNT = 15;
 
     @Autowired
@@ -28,7 +31,7 @@ public class ProfileGenerateServiceImpl implements ProfileGenerateService {
     @Override
     public Profile generateProfile(String name, BlogCategory blogCategory) {
 
-        InfoWiki infoWiki = infoWikiRetrieveService.getInfoWikiByName(name);
+        InfoWiki infoWiki = infoWikiRetrieveService.getInfoWikiByName(transformNameToWikiFormat(name));
 
         List<String> allTagsForBlogCategory = tagRetrieveService.getAllTags(blogCategory);
 
@@ -84,5 +87,18 @@ public class ProfileGenerateServiceImpl implements ProfileGenerateService {
         Collections.shuffle(copy);
         int currentTagCount = allTagsForBlogCategory.size();
         return copy.subList(0, currentTagCount < count ? currentTagCount : count);
+    }
+
+    private String transformNameToWikiFormat(final String name) {
+        String [] namePart = name.split(" ");
+        List<String> transformedNamePart = new ArrayList<>(namePart.length);
+        for(int i = 0; i < namePart.length; i++) {
+            try {
+                transformedNamePart.add(URLEncoder.encode(namePart[i], UTF_8));
+            } catch (UnsupportedEncodingException e) {
+                e.printStackTrace();
+            }
+        }
+        return String.join("+", transformedNamePart);
     }
 }
