@@ -65,9 +65,9 @@ function createPublication(publication = {}, ownerName) {
     publicationElement.innerHTML =
         `<a href="publication.html?owner=${ownerName}&location=${location}">` +
             `<div class="_e3il2">` +
-                `<div class="_4rbun">` +
+                `<div class="_4rbun  ${ifilter}">` +
                     `<img
-                        class="_2di5p publ-image ${ifilter}"
+                        class="_2di5p publ-image"
                         alt="${tags.join(' #')}"
                         src="${imageUrl}">` +
                 `</div>` +
