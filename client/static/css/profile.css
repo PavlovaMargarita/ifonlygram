@@ -8761,15 +8761,23 @@ a._sb9lc, a._sb9lc:visited {
     display: none;
 }
 
+#dialog ._sxolz {
+    background-color: #fff;
+}
+
 #dialog-image-container {
     background-color: transparent;
 }
 
 #dialog-image {
-    object-fit: contain;
+    object-fit: cover;
     height: auto;
     width: auto;
     right: 0;
+    top: 0;
+
+    min-height: 100%;
+    max-width: 100%;
 }
 
 .full-height {
