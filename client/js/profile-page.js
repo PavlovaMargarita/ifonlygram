@@ -8,6 +8,12 @@ function onProfileLoadPage() {
         sendGenerateProfile(name, category)
             .then(parseProfileData);
     }
+
+    document.getElementById('close-dialog')
+        .addEventListener('click', (e) => {
+            e.preventDefault();
+            closeDialog();
+        });
 }
 
 function parseProfileQueryParams() {
@@ -35,7 +41,9 @@ function parseProfileData(data) {
     let { name, profileDescription, profilePicture, publications } = data;
     const publicationsNumber = publications.length;
     profilePicture = profilePicture || (publications && publications[publicationsNumber - 1].imageUrl);
+
     setImage('profile-image', profilePicture);
+    setImage('dialog-profile-img', profilePicture);
     setText('profile-name', name);
     setText('description', profileDescription);
     setText('publications-number', publications.length);
@@ -57,17 +65,17 @@ function createPublicationsRow(ownerName, ...publications) {
     publications.forEach(publication => row.appendChild(createPublication(publication, ownerName)));
     return row;
 }
+
 function createPublication(publication = {}, ownerName) {
     const { description = '', imageUrl = '', location = '', tags = []} = publication;
     const publicationElement = document.createElement('div');
-    const ifilter = ifilters[Math.floor(Math.random()*ifilters.length)];
+    const ifilter = ifilters[Math.floor(Math.random() * ifilters.length)];
     publicationElement.classList.add('_mck9w', '_gvoze', 'row-element');
     publicationElement.innerHTML =
-        `<a href="publication.html?owner=${ownerName}&location=${location}">` +
+        `<a href="publication.html?owner=${ownerName}&location=${location}" class="open-dialog">` +
             `<div class="_e3il2">` +
-                `<div class="_4rbun  ${ifilter}">` +
-                    `<img
-                        class="_2di5p publ-image"
+                `<div class="_4rbun ${ifilter}">` +
+                    `<img class="_2di5p publ-image"
                         alt="${tags.join(' #')}"
                         src="${imageUrl}">` +
                 `</div>` +
@@ -79,5 +87,47 @@ function createPublication(publication = {}, ownerName) {
                 `</div>` +
             `</div>` +
         `</a>`;
+
+    publicationElement
+        .getElementsByClassName('open-dialog')[0]
+        .addEventListener('click', (e) => {
+            e.preventDefault();
+            openDialog(publication, ownerName);
+        });
+
     return publicationElement;
+}
+
+function openDialog(publication, ownerName) {
+    const { description = '', imageUrl = '', location = '', tags = []} = publication;
+    const dialog = document.getElementById('dialog');
+
+    setImage('dialog-image', imageUrl);
+    setText('location', location);
+    setText('publication-description', description);
+    eachClassElement('ownername', e => e.innerText = ownerName, dialog);
+    addTags(tags);
+
+    dialog.classList.remove('hidden');
+}
+
+function closeDialog() {
+    document.getElementById('dialog').classList.add('hidden');
+}
+
+function addTags(tags) {
+    const tagsElement = document.getElementById('tags');
+    const lastIdx = tags.length - 1;
+
+    tags.forEach((tag, idx) => {
+        const tagElement = document.createElement('A');
+        tagElement.innerText = '#'+tag;
+        tagsElement.appendChild(tagElement);
+
+        if (idx < lastIdx) {
+            const span = document.createElement('SPAN');
+            span.innerText = ' ';
+            tagsElement.appendChild(span);
+        }
+    });
 }

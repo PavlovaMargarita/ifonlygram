@@ -39,6 +39,10 @@ function setText(id, text) {
     document.getElementById(id).innerText = text;
 }
 
+function eachClassElement(className, callback, root = document) {
+    Array.prototype.forEach.call(root.getElementsByClassName(className), callback);
+}
+
 function relocateTo(url) {
     window.location.href = url;
 }
