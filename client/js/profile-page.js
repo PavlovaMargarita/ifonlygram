@@ -6,7 +6,7 @@ function onProfileLoadPage() {
     const { name, category } = parseProfileQueryParams();
     if (name && category) {
         sendGenerateProfile(name, category)
-            .then(parseProfileData);
+            .then(data => parseProfileData(data, category));
     }
 
     document.getElementById('close-dialog')
@@ -37,7 +37,7 @@ function sendGenerateProfile(name, category) {
     return sendRequest(`/generateProfile?name=${name}&blogCategory=${category}`, 'GET');
 }
 
-function parseProfileData(data) {
+function parseProfileData(data, category) {
     let { name, profileDescription, profilePicture, publications } = data;
     const publicationsNumber = publications.length;
     profilePicture = profilePicture || (publications && publications[publicationsNumber - 1].imageUrl);
@@ -46,7 +46,7 @@ function parseProfileData(data) {
     setImage('dialog-profile-img', profilePicture);
     setText('subscribers', Math.ceil((Math.random() * 123) + 1));
     setText('profile-name', name);
-    setText('description', profileDescription);
+    setText('description', profileDescription || category);
     setText('publications-number', publications.length);
 
     const publicationsElement = document.getElementById('publications');
