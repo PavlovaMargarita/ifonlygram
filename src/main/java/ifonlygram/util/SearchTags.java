@@ -6,7 +6,6 @@ import java.util.stream.Stream;
 
 public class SearchTags {
     public List searchTags(String text) throws IOException {
-        System.out.println(lastWords(sortByValue(searchWords(stopWord(), text)))); //Удалить
         return lastWords(sortByValue(searchWords(stopWord(), text)));
     }
 
