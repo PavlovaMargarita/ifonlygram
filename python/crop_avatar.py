@@ -47,12 +47,8 @@ def crop_face(file):
         crop.save(out_file_name)
     else:
         avatar_dir = os.path.join(dir_name, AVATAR_DIR)
-        src_file = os.path.join(dir_name, TROLL_FACE)
-        shutil.copy(src_file, avatar_dir)
-
-        dst_file = os.path.join(avatar_dir, TROLL_FACE)
         new_dst_file_name = os.path.join(avatar_dir, CROPPED_JPG)
-        os.rename(dst_file, new_dst_file_name)
+        os.rename(img_path, new_dst_file_name)
 
 
 if __name__ == '__main__':
