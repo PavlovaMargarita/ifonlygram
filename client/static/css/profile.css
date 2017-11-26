@@ -8749,6 +8749,33 @@ a._sb9lc, a._sb9lc:visited {
     object-fit: cover;
 }
 
+#dialog {
+    -webkit-transition: display 0.8s;
+    -moz-transition: display 0.8s;
+    -ms-transition: display 0.8s;
+    -o-transition: display 0.8s;
+    transition: display 0.8s;
+}
+
+#dialog.hidden {
+    display: none;
+}
+
+#dialog-image-container {
+    background-color: transparent;
+}
+
+#dialog-image {
+    object-fit: contain;
+    height: auto;
+    width: auto;
+    right: 0;
+}
+
+.full-height {
+    height: 100%;
+}
+
 @media (min-width: 736px) {
     ._mesn5 {
         -webkit-box-sizing: content-box;
