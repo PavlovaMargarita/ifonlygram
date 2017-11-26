@@ -46,7 +46,7 @@ function parseProfileData(data, category) {
 
     setImage('profile-image', profilePicture);
     setImage('dialog-profile-img', profilePicture);
-    setText('subscribers', Math.ceil((Math.random() * 123) + 1));
+    setText('subscribers', Math.ceil((Math.random() * 999) + 1) + 'тыс. ');
     setText('profile-name', name);
     setText('description', profileDescription || category);
     setText('publications-number', publications.length);
