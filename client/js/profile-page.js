@@ -6,7 +6,7 @@ function onProfileLoadPage() {
     const { name, category } = parseProfileQueryParams();
     if (name && category) {
         sendGenerateProfile(name, category)
-            .then(parseProfileData);
+            .then(data => parseProfileData(data, category));
     }
 
     document.getElementById('close-dialog')
@@ -14,6 +14,8 @@ function onProfileLoadPage() {
             e.preventDefault();
             closeDialog();
         });
+
+    disableClicks();
 }
 
 function parseProfileQueryParams() {
@@ -37,16 +39,16 @@ function sendGenerateProfile(name, category) {
     return sendRequest(`/generateProfile?name=${name}&blogCategory=${category}`, 'GET');
 }
 
-function parseProfileData(data) {
+function parseProfileData(data, category) {
     let { name, profileDescription, profilePicture, publications } = data;
     const publicationsNumber = publications.length;
     profilePicture = profilePicture || (publications && publications[publicationsNumber - 1].imageUrl);
 
     setImage('profile-image', profilePicture);
     setImage('dialog-profile-img', profilePicture);
-    setText('subscribers', Math.ceil((Math.random() * 123) + 1));
+    setText('subscribers', Math.ceil((Math.random() * 999) + 1) + 'тыс. ');
     setText('profile-name', name);
-    setText('description', profileDescription);
+    setText('description', profileDescription || category);
     setText('publications-number', publications.length);
 
     const publicationsElement = document.getElementById('publications');
@@ -70,10 +72,11 @@ function createPublicationsRow(ownerName, ...publications) {
 function createPublication(publication = {}, ownerName) {
     const { description = '', imageUrl = '', location = '', tags = []} = publication;
     const publicationElement = document.createElement('div');
-    const ifilter = ifilters[Math.floor(Math.random() * ifilters.length)];
+    const ifilter = IFILTERS[Math.floor(Math.random() * IFILTERS.length)];
+
     publicationElement.classList.add('_mck9w', '_gvoze', 'row-element');
     publicationElement.innerHTML =
-        `<a href="publication.html?owner=${ownerName}&location=${location}" class="open-dialog">` +
+        `<a href="publication.html?owner=${ownerName}&location=${location}" class="enable open-dialog">` +
             `<div class="_e3il2">` +
                 `<div class="_4rbun ${ifilter}">` +
                     `<img class="_2di5p publ-image"
@@ -93,15 +96,20 @@ function createPublication(publication = {}, ownerName) {
         .getElementsByClassName('open-dialog')[0]
         .addEventListener('click', (e) => {
             e.preventDefault();
-            openDialog(publication, ownerName);
+            openDialog(publication, ownerName, ifilter);
         });
 
+    disableClicks(publicationElement);
     return publicationElement;
 }
 
-function openDialog(publication, ownerName) {
+function openDialog(publication, ownerName, ifilter='') {
     const { description = '', imageUrl = '', location = '', tags = []} = publication;
     const dialog = document.getElementById('dialog');
+    const filterElement = document.getElementById('dialog-img-wrapper');
+
+    filterElement.className = '';
+    filterElement.classList.add(ifilter);
 
     setImage('dialog-image', imageUrl);
     setText('location', location);
