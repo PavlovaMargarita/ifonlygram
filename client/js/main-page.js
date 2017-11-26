@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', onLoadPage);
 
 function onLoadPage() {
     fetchCategories().then(updateCategories);
+    disableClicks();
 }
 
 function fetchCategories() {

@@ -14,6 +14,8 @@ function onProfileLoadPage() {
             e.preventDefault();
             closeDialog();
         });
+
+    disableClicks();
 }
 
 function parseProfileQueryParams() {
@@ -70,10 +72,11 @@ function createPublicationsRow(ownerName, ...publications) {
 function createPublication(publication = {}, ownerName) {
     const { description = '', imageUrl = '', location = '', tags = []} = publication;
     const publicationElement = document.createElement('div');
-    const ifilter = ifilters[Math.floor(Math.random() * ifilters.length)];
+    const ifilter = IFILTERS[Math.floor(Math.random() * IFILTERS.length)];
+
     publicationElement.classList.add('_mck9w', '_gvoze', 'row-element');
     publicationElement.innerHTML =
-        `<a href="publication.html?owner=${ownerName}&location=${location}" class="open-dialog">` +
+        `<a href="publication.html?owner=${ownerName}&location=${location}" class="enable open-dialog">` +
             `<div class="_e3il2">` +
                 `<div class="_4rbun ${ifilter}">` +
                     `<img class="_2di5p publ-image"
@@ -96,6 +99,7 @@ function createPublication(publication = {}, ownerName) {
             openDialog(publication, ownerName);
         });
 
+    disableClicks(publicationElement);
     return publicationElement;
 }
 
