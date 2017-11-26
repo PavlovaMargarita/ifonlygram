@@ -63,7 +63,7 @@ public class ProfileGenerateServiceImpl implements ProfileGenerateService {
         Collections.shuffle(allPublication);
         Profile profile = new Profile();
         profile.setName(name);
-        profile.setProfilePicture(createAvatarService.createAvatar(""));
+        profile.setProfilePicture(createAvatarService.createAvatar(infoWiki.getAvatarURI()));
         profile.setPublications(allPublication);
 
         return profile;

@@ -11,19 +11,20 @@ import static ifonlygram.util.FileHelper.saveImage;
 @Component
 public class CreateAvatarServiceImpl implements CreateAvatarService {
 
-    private static final String PYTHON_AVATAR_SCRIPT = "python/create_avatar.py";
+    private static final String PYTHON_AVATAR_SCRIPT = "python/crop_avatar.py";
 
     @Autowired
     private CloudinaryApiClient cloudinaryApiClient;
 
     @Override
     public String createAvatar(String originalUrl) {
+        originalUrl = "https:" + originalUrl;
         final String originalImagePath = "avatar/originalimage.jpg";
         saveImage(originalUrl, originalImagePath);
 
-        executePython(PYTHON_AVATAR_SCRIPT, originalImagePath);
+        executePython(PYTHON_AVATAR_SCRIPT, "originalimage.jpg");
 
-        final String croppedImagePath = "avatar/processed.jpg";
+        final String croppedImagePath = "avatar/cropped.jpg";
         String croppedImageUrl = null;
         try {
             croppedImageUrl = cloudinaryApiClient.saveImage(croppedImagePath);
