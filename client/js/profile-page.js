@@ -60,13 +60,14 @@ function createPublicationsRow(ownerName, ...publications) {
 function createPublication(publication = {}, ownerName) {
     const { description = '', imageUrl = '', location = '', tags = []} = publication;
     const publicationElement = document.createElement('div');
+    const ifilter = ifilters[Math.floor(Math.random()*ifilters.length)];
     publicationElement.classList.add('_mck9w', '_gvoze', 'row-element');
     publicationElement.innerHTML =
         `<a href="publication.html?owner=${ownerName}&location=${location}">` +
             `<div class="_e3il2">` +
                 `<div class="_4rbun">` +
                     `<img
-                        class="_2di5p publ-image"
+                        class="_2di5p publ-image ${ifilter}"
                         alt="${tags.join(' #')}"
                         src="${imageUrl}">` +
                 `</div>` +
