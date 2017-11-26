@@ -6,6 +6,7 @@ import ifonlygram.insta.InstaFileParser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import javax.annotation.PostConstruct;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -15,7 +16,15 @@ import java.util.stream.Collectors;
 public class TagRetrieveServiceImpl implements TagRetrieveService {
 
     @Autowired
-    InstaFileParser fileParser;
+    private InstaFileParser fileParser;
+
+    private List<InstaTag> instaTags;
+
+    @PostConstruct
+    public void init() {
+        instaTags = fileParser.getAllTagList();
+
+    }
 
 
     //При неверных аргумениах или пустом результате возвразается null
@@ -25,7 +34,6 @@ public class TagRetrieveServiceImpl implements TagRetrieveService {
         if (blogCategory == null) {
             return null;
         }
-        List<InstaTag> instaTags = fileParser.getAllTagList();
         InstaTag randomTag = null;
         if (instaTags != null && !instaTags.isEmpty()) {
 
@@ -52,7 +60,6 @@ public class TagRetrieveServiceImpl implements TagRetrieveService {
             return null;
         }
 
-        List<InstaTag> instaTags = fileParser.getAllTagList();
         List<String> categoryListTag = null;
         if (instaTags != null && !instaTags.isEmpty()) {
 
@@ -69,7 +76,6 @@ public class TagRetrieveServiceImpl implements TagRetrieveService {
         if (tag == null || blogCategory == null) {
             return null;
         }
-        List<InstaTag> instaTags = fileParser.getAllTagList();
         if (instaTags != null && !instaTags.isEmpty()) {
             InstaTag randomTag = null;
             List<InstaTag> categoryListTag = instaTags.stream().filter(item -> (item.getCategory() == blogCategory && (tag).equals(item.getTagName())))

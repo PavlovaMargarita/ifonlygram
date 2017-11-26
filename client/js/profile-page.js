@@ -44,6 +44,7 @@ function parseProfileData(data) {
 
     setImage('profile-image', profilePicture);
     setImage('dialog-profile-img', profilePicture);
+    setText('subscribers', Math.ceil((Math.random() * 123) + 1));
     setText('profile-name', name);
     setText('description', profileDescription);
     setText('publications-number', publications.length);
@@ -69,11 +70,12 @@ function createPublicationsRow(ownerName, ...publications) {
 function createPublication(publication = {}, ownerName) {
     const { description = '', imageUrl = '', location = '', tags = []} = publication;
     const publicationElement = document.createElement('div');
+    const ifilter = ifilters[Math.floor(Math.random() * ifilters.length)];
     publicationElement.classList.add('_mck9w', '_gvoze', 'row-element');
     publicationElement.innerHTML =
         `<a href="publication.html?owner=${ownerName}&location=${location}" class="open-dialog">` +
             `<div class="_e3il2">` +
-                `<div class="_4rbun">` +
+                `<div class="_4rbun ${ifilter}">` +
                     `<img class="_2di5p publ-image"
                         alt="${tags.join(' #')}"
                         src="${imageUrl}">` +

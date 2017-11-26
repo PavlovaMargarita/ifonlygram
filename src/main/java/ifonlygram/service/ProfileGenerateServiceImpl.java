@@ -31,18 +31,23 @@ public class ProfileGenerateServiceImpl implements ProfileGenerateService {
     @Autowired
     private CreateAvatarService createAvatarService;
 
+    private List<String> allTagsForBlogCategory;
+
+    private int tagsByCategoryIndex;
+
     @Override
     public Profile generateProfile(String name, BlogCategory blogCategory) {
 
         InfoWiki infoWiki = infoWikiRetrieveService.getInfoWikiByName(transformNameToWikiFormat(name));
 
-        List<String> allTagsForBlogCategory = tagRetrieveService.getAllTags(blogCategory);
+        List<String> allTagsForBlogCategoryList = tagRetrieveService.getAllTags(blogCategory);
+        setAllTagsByCategory(allTagsForBlogCategoryList);
 
         List<Publication> allPublication = new ArrayList<Publication>();
 
         List<String> wikiParameters = getParametersFromInfoWiki(infoWiki);
         for (String wikiParameter : wikiParameters) {
-            String tag = getRandomTag(blogCategory);
+            String tag = getRandomTagFromTagsByCategory();
             List<Publication> publications = publicationGenerateService.generatePublications(tag, name, wikiParameter); //contain image url and one tag
 
             // set description, location and add tags
@@ -73,6 +78,12 @@ public class ProfileGenerateServiceImpl implements ProfileGenerateService {
         return profile;
     }
 
+    private void setAllTagsByCategory(List<String> allTagsForBlogCategory) {
+        this.allTagsForBlogCategory = allTagsForBlogCategory;
+        Collections.shuffle(allTagsForBlogCategory);
+        tagsByCategoryIndex = 0;
+    }
+
     private List<String> getParametersFromInfoWiki(InfoWiki infoWiki) {
         final List<String> wikiParameters = new ArrayList<String>();
         wikiParameters.add(infoWiki.getYearOfBirth().toString());
@@ -84,8 +95,21 @@ public class ProfileGenerateServiceImpl implements ProfileGenerateService {
         return wikiParameters;
     }
 
-    private String getRandomTag(BlogCategory blogCategory) {
-        return tagRetrieveService.getRandomTag(blogCategory);
+    private String getRandomTagFromTagsByCategory() {
+        if (allTagsForBlogCategory == null || allTagsForBlogCategory.isEmpty()) {
+            return "";
+        }
+        String tag = allTagsForBlogCategory.get(tagsByCategoryIndex);
+        increaseTagByCategoryIndex();
+        return tag;
+    }
+
+
+    private void increaseTagByCategoryIndex() {
+        tagsByCategoryIndex++;
+        if (tagsByCategoryIndex >= allTagsForBlogCategory.size()) {
+            tagsByCategoryIndex = 0;
+        }
     }
 
     private List<String> getRandomTags(List<String> allTagsForBlogCategory, int count) {
