@@ -11,9 +11,9 @@ import java.util.Map;
 @Component
 public class CloudinaryApiClientImpl implements CloudinaryApiClient {
     private static Cloudinary cloudinary = new Cloudinary(ObjectUtils.asMap(
-            "cloud_name", "graduatework",
-            "api_key", "593791151728485",
-            "api_secret", "yU_xhmPOozFfRQa3izDzT3sIFmE"));
+            "cloud_name", "cloud_name",
+            "api_key", "api_key",
+            "api_secret", "api_secret"));
 
     @Override
     public String saveImage(String path) {

@@ -43,7 +43,7 @@ public class ProfileGenerateServiceImpl implements ProfileGenerateService {
         List<String> allTagsForBlogCategoryList = tagRetrieveService.getAllTags(blogCategory);
         setAllTagsByCategory(allTagsForBlogCategoryList);
 
-        List<Publication> allPublication = new ArrayList<Publication>();
+        List<Publication> allPublication = new ArrayList<>();
 
         List<String> wikiParameters = getParametersFromInfoWiki(infoWiki);
         for (String wikiParameter : wikiParameters) {
@@ -85,7 +85,7 @@ public class ProfileGenerateServiceImpl implements ProfileGenerateService {
     }
 
     private List<String> getParametersFromInfoWiki(InfoWiki infoWiki) {
-        final List<String> wikiParameters = new ArrayList<String>();
+        final List<String> wikiParameters = new ArrayList<>();
         wikiParameters.add(infoWiki.getYearOfBirth().toString());
         wikiParameters.add(infoWiki.getYearOfDeath().toString());
         wikiParameters.addAll(infoWiki.getJobs());
@@ -113,7 +113,7 @@ public class ProfileGenerateServiceImpl implements ProfileGenerateService {
     }
 
     private List<String> getRandomTags(List<String> allTagsForBlogCategory, int count) {
-        List<String> copy = new LinkedList<String>(allTagsForBlogCategory);
+        List<String> copy = new LinkedList<>(allTagsForBlogCategory);
         Collections.shuffle(copy);
         int currentTagCount = allTagsForBlogCategory.size();
         return copy.subList(0, currentTagCount < count ? currentTagCount : count);
@@ -122,9 +122,9 @@ public class ProfileGenerateServiceImpl implements ProfileGenerateService {
     private String transformNameToWikiFormat(final String name) {
         String [] namePart = name.split(" ");
         List<String> transformedNamePart = new ArrayList<>(namePart.length);
-        for(int i = 0; i < namePart.length; i++) {
+        for (String aNamePart : namePart) {
             try {
-                transformedNamePart.add(URLEncoder.encode(namePart[i], UTF_8));
+                transformedNamePart.add(URLEncoder.encode(aNamePart, UTF_8));
             } catch (UnsupportedEncodingException e) {
                 e.printStackTrace();
             }

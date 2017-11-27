@@ -7,7 +7,7 @@ public class Profile {
     private String name;
     private String profilePicture;
     private String profileDescription;
-    private List<Publication> publications = new ArrayList<Publication>();
+    private List<Publication> publications = new ArrayList<>();
 
     public Profile() {}
 
