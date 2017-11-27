@@ -33,7 +33,7 @@ public class PublicationGenerateServiceImpl implements PublicationGenerateServic
 
             List<String> urls = findImageUrlByParameters(requestParameters);
 
-            List<Publication> publicationList = new ArrayList<Publication>();
+            List<Publication> publicationList = new ArrayList<>();
             urls.forEach(url -> {
                 Publication publication = new Publication();
                 publication.setImageUrl(url);

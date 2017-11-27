@@ -9,5 +9,5 @@ import java.util.List;
  */
 public interface IInstaFileParser {
 
-    public List<InstaTag> getAllTagList();
+    List<InstaTag> getAllTagList();
 }

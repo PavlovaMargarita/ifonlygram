@@ -43,9 +43,4 @@ public class IfOnlyGramRest {
         System.out.println("call croppedImage");
         return cropImageService.cropImage(imageUrl);
     }
-
-    @RequestMapping(value = "/testAPI", method = GET)
-    public String testApi() {
-        return "BOO!!";
-    }
 }

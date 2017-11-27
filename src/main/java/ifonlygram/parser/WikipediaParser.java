@@ -12,7 +12,27 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import static ifonlygram.parser.WikipediaParserConstants.*;
+import static ifonlygram.parser.WikipediaParserConstants.AVATAR_CODE;
+import static ifonlygram.parser.WikipediaParserConstants.BING_SEARCH_URI;
+import static ifonlygram.parser.WikipediaParserConstants.B_RESULTS;
+import static ifonlygram.parser.WikipediaParserConstants.DATA_WIKIDATA_PROPERTY_ID;
+import static ifonlygram.parser.WikipediaParserConstants.EMPTY_STRING;
+import static ifonlygram.parser.WikipediaParserConstants.HUSBAND;
+import static ifonlygram.parser.WikipediaParserConstants.INFOBOX;
+import static ifonlygram.parser.WikipediaParserConstants.JOB_CODE;
+import static ifonlygram.parser.WikipediaParserConstants.JOB_STYLE;
+import static ifonlygram.parser.WikipediaParserConstants.PLACE_OF_BIRTH_CODE;
+import static ifonlygram.parser.WikipediaParserConstants.PLACE_OF_DEATH_CODE;
+import static ifonlygram.parser.WikipediaParserConstants.STYLE;
+import static ifonlygram.parser.WikipediaParserConstants.TIMEOUT;
+import static ifonlygram.parser.WikipediaParserConstants.TITLE;
+import static ifonlygram.parser.WikipediaParserConstants.WIFE;
+import static ifonlygram.parser.WikipediaParserConstants.WIKIPEDIA;
+import static ifonlygram.parser.WikipediaParserConstants.YEAR;
+import static ifonlygram.parser.WikipediaParserConstants.YEAR_OF_BIRTH_CODE;
+import static ifonlygram.parser.WikipediaParserConstants.YEAR_OF_DEATH_CODE;
+import static ifonlygram.parser.WikipediaParserConstants.YEAR_REG_EXPRESSION;
+import static ifonlygram.parser.WikipediaParserConstants.ZERO;
 
 @Component
 public class WikipediaParser {
@@ -134,7 +154,7 @@ public class WikipediaParser {
         if (jobsTitles == null) {
             return Collections.EMPTY_LIST;
         }
-        List<String> jobs = new ArrayList<String>();
+        List<String> jobs = new ArrayList<>();
         for (int i = 0; i < jobsTitles.size(); i++) {
             Element job = jobsTitles.get(i);
             jobs.add(job.attr(TITLE));

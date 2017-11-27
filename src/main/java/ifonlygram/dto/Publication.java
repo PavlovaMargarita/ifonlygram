@@ -8,7 +8,7 @@ public class Publication {
     private String croppedUrl;
     private String description;
     private String location;
-    private List<String> tags = new ArrayList<String>();
+    private List<String> tags = new ArrayList<>();
 
     public Publication() {}
 
